@@ -1,13 +1,108 @@
-body {
+@charset "UTF-8";
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  border: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.5;
+  color: rgb(65, 65, 65);
+  background-color: #FBF8EC;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1238px;
+  width: 100%;
+  padding: 0 15px 0 15px;
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 756px;
+  }
+}
+@media (max-width: 506px) {
+  .container {
+    padding: 0 10px 0 10px;
+  }
+}
+
+.title-h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .title-h2 {
+    font-size: 24px;
+  }
 }
