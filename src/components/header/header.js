@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './style.css';
 import Heart from './img/heart.svg';
 import Order from './img/order.svg';
 import ShoppingCart from './img/shopping-cart.svg';
