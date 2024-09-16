@@ -3,6 +3,7 @@ import imgSlide from './img/slide-1.png';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { register } from 'swiper/element/bundle';
+import 'swiper/css';
 import './style.css';
 
 register();
