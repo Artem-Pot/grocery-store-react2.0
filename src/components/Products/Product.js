@@ -1,10 +1,11 @@
 import React from 'react';
 import './style.css';
+import ArrProducts from '../Products/ArrProducts';
 
-function Product({ArrProducts}) {
-  return ( 
+function Product() {
+  return (
     <>
-    {ArrProducts.slice(0,4).map((product) => (
+    {ArrProducts.slice(0, 4).map((product) => (
         <div className="product" key={product.id}>
         <div className="product__box-images">
         <a href='/' className="product__link">

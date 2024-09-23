@@ -13,9 +13,10 @@ root.render(
     <>
     <Header />
     <Swiper />
-    <Stock />
-    <NewItems />
+    <Stock text={'Акции'} textall={'Все акции'}/>
+    <NewItems text={'Новинки'} textall={'Все новинки'}/>
     <Footer />
 
     </>
 );
+

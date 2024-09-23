@@ -1,0 +1,180 @@
+
+/* Карточка товара*/
+.product {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 272px;
+    min-height: 349px;
+    height: 100%;
+    -webkit-box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: #fff;
+    gap: 8px;
+  }
+  @media (max-width: 960px) {
+    .product {
+      width: 224px;
+    }
+  }
+  @media (max-width: 506px) {
+    .product {
+      width: 160px;
+      min-height: 300px;
+    }
+  }
+  .product__box-images {
+    position: relative;
+  }
+  .product__images {
+    width: 100%;
+  }
+  .product__button-favorites {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: url("./img/favorites.svg");
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+  }
+  .product__button-favorites:hover {
+    fill: red;
+  }
+  @media (max-width: 960px) {
+    .product__button-favorites {
+      -webkit-transform: scale(0.8);
+          -ms-transform: scale(0.8);
+              transform: scale(0.8);
+      top: 8px;
+      right: 8px;
+    }
+  }
+  .product__sales {
+    position: absolute;
+    background-color: #FF6633;
+    font-size: 16px;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    left: 10px;
+    bottom: 10px;
+  }
+  @media (max-width: 506px) {
+    .product__sales {
+      font-size: 12px;
+    }
+  }
+  .product__box-price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-height: 45px;
+    width: 100%;
+    padding: 0 8px;
+  }
+  .product__price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .product__price-cart {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  @media (max-width: 506px) {
+    .product__price-cart {
+      font-size: 14px;
+    }
+  }
+  .product__title {
+    color: #BFBFBF;
+  }
+  @media (max-width: 506px) {
+    .product__title {
+      font-size: 8px;
+    }
+  }
+  .product__price-nocart {
+    font-size: 16px;
+  }
+  @media (max-width: 506px) {
+    .product__price-nocart {
+      font-size: 12px;
+    }
+  }
+  .product__name {
+    font-size: 16px;
+    padding: 0 8px;
+  }
+  .product__link {
+    display: inline-block;
+    color: inherit;
+  }
+  @media (max-width: 506px) {
+    .product__link {
+      font-size: 12px;
+    }
+  }
+  .product__box-rating {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: start;
+        align-self: start;
+    gap: 4px;
+    padding: 0 8px;
+  }
+  .product__star {
+    background: url("./img/star-off.svg");
+    width: 16px;
+    height: 16px;
+  }
+  .product__star:hover {
+    background: url("./img/star-on.svg");
+  }
+  .product__star_on {
+    background: url("./img/star-on.svg");
+  }
+  .product__button-buy {
+    width: calc(100% - 16px);
+    height: 40px;
+    font-size: 16px;
+    color: #70C05B;
+    border-radius: 4px;
+    border: 1px solid #70C05B;
+    margin-bottom: 8px;
+  }
+  .product__button-buy:hover {
+    background-color: #FF6633;
+    color: #fff;
+    border: none;
+  }
