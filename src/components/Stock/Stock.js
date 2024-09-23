@@ -9,7 +9,7 @@ function Stock() {
             <div className="product-list__wrapper">
                 <div className="product-list__header">
                     <h2 className="title-h2">Акции</h2>
-                    <a class="product-list__all" href="#">Все акции</a>
+                    <a className="product-list__all" href="#">Все акции</a>
                 </div>
 
                 <div className="product-list__box">

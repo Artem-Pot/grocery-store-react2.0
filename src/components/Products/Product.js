@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import ArrProducts from './ArrProducts';
 
 
-function Product() {
+function Product(props) {
   return ( 
 
     <div className="product">
