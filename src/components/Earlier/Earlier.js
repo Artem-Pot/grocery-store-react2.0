@@ -2,7 +2,7 @@ import React from 'react';
 import Product from '../Products/Product';
 import './style.css';
 
-function Stock(props) {
+function Earlier(props) {
   return (
     <section className="product-list product-list_stock">
         <div className="container">
@@ -12,7 +12,7 @@ function Stock(props) {
                     <a href='/' className="product-list__all">{props.textall}</a>
                 </div>
                 <div className="product-list__box">
-                    <Product startProducts={0} quantityProducts={4} hiddenProperties='false'/>
+                    <Product startProducts={7} quantityProducts={11} hiddenProperties='true' />
                 </div>
             </div>
         </div>
@@ -20,7 +20,7 @@ function Stock(props) {
     )
 }
 
-export default Stock;
+export default Earlier;
 
 
 

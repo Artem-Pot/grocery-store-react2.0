@@ -3,30 +3,23 @@ import './style.css';
 import ArrProducts from '../Products/ArrProducts';
 
 function Product(props) {
-
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
-      }
-      
-      
-
   return (
     <>
-    {ArrProducts.slice(0, props.quantityProducts).map((product) => (
+    {ArrProducts.slice(props.startProducts, props.quantityProducts).map((product) => (
         <div className="product" key={product.id}>
         <div className="product__box-images">
         <a href='/' className="product__link">
             <img src={product.imgProduct} className="product__images" alt="Изображение продукта"/>
         </a>
             <button className="product__button-favorites" type="button"></button>
-            <span className="product__sales">{product.productSales}</span>
+            <span className={props.hiddenProperties === 'true'? 'displayNone' : 'product__sales'}>{product.productSales}</span>
         </div>
         <div className="product__box-price">
             <div className="product__price">
                 <span className="product__price-cart">{product.productPriceCart} ₽</span>
-                <span className="product__title">С картой</span>
+                <span className={props.hiddenProperties === 'true'? 'displayNone' : 'product__title'}>С картой</span>
             </div>
-            <div className="product__price">
+            <div className={props.hiddenProperties === 'true'? 'displayNone' : 'product__price'}>
                 <span className="product__price-nocart">{product.productNoCart} ₽</span>
                 <span className="product__title">Обычная</span>
             </div>
@@ -49,4 +42,3 @@ function Product(props) {
   )}
 
 export default Product;
-
