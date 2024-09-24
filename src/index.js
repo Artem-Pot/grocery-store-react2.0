@@ -8,6 +8,7 @@ import NewItems from './components/NewItems/NewItems';
 import Earlier from './components/Earlier/Earlier';
 import SpecialOffers from './components/SpecialOffers/SpecialOffers';
 import OurStores from './components/OurStores/OurStores';
+import Articles from './components/Articles/Articles';
 import Footer from './components/Footer/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -20,6 +21,7 @@ root.render(
     <Earlier text={'Покупали ранее'} textall={'Все покупки'}/>
     <SpecialOffers />
     <OurStores />
+    <Articles />
     <Footer />
     </>
 );
