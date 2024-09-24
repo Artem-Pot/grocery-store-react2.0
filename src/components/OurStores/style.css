@@ -1,0 +1,94 @@
+/*-------------------Наши магазины------------------------*/
+.our-stores {
+  margin-top: 120px;
+}
+.our-stores__box-button {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px;
+}
+.our-stores__button {
+  width: 97px;
+  height: 32px;
+  padding: 8px;
+  background-color: #F3F2F1;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #606060;
+  text-align: center;
+}
+.our-stores__button_activ {
+  background-color: #70C05B;
+  color: #fff;
+}
+
+.our-stores__box-map {
+  padding-top: 10px;
+}
+
+.our-stores__map {
+  margin-top: 24px;
+}
+.our-stores__map_2, .our-stores__map_3, .our-stores__map_4 {
+  display: none;
+}
+
+/*стили модуля таба*/
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-tabs__tab-list {
+  border-bottom: 1px solid #aaa;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.react-tabs__tab {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-bottom: none;
+  bottom: -1px;
+  position: relative;
+  list-style: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.react-tabs__tab--selected {
+  background: #fff;
+  background-color: #70C05B;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.react-tabs__tab--disabled {
+  color: GrayText;
+  cursor: default;
+}
+
+.react-tabs__tab:focus {
+  outline: none;
+}
+
+.react-tabs__tab:focus:after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.react-tabs__tab-panel {
+  display: none;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}
