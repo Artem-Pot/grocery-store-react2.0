@@ -1,6 +1,5 @@
 import React from 'react';
 import Product from '../Products/Product';
-import ArrProducts from '../Products/ArrProducts';
 import './style.css';
 
 function NewItems(props) {
@@ -13,15 +12,12 @@ function NewItems(props) {
                         <a href='/' className="product-list__all">{props.textall}</a>
                     </div>
                     <div className="product-list__box">
-
-                        <Product ArrProducts={ArrProducts} />
-
+                        <Product quantityProducts={4}/>
                     </div>
                 </div>
             </div>
         </section>
         )
     }
-
 
 export default NewItems;

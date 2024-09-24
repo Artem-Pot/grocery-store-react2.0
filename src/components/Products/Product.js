@@ -2,10 +2,17 @@ import React from 'react';
 import './style.css';
 import ArrProducts from '../Products/ArrProducts';
 
-function Product() {
+function Product(props) {
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
+      
+      
+
   return (
     <>
-    {ArrProducts.slice(0, 4).map((product) => (
+    {ArrProducts.slice(0, props.quantityProducts).map((product) => (
         <div className="product" key={product.id}>
         <div className="product__box-images">
         <a href='/' className="product__link">

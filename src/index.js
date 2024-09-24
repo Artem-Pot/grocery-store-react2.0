@@ -16,7 +16,7 @@ root.render(
     <Stock text={'Акции'} textall={'Все акции'}/>
     <NewItems text={'Новинки'} textall={'Все новинки'}/>
     <Footer />
-
     </>
 );
+
 
