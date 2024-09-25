@@ -1,113 +1,118 @@
 /*------------------------спец предложения---------------------------*/
 .special-offers {
-    margin-top: 80px;
-  }
-  .special-offers__title {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.5;
-  }
+  margin-top: 80px;
+}
+
+.special-offers__title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.special-offers__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+@media (max-width: 760px) {
   .special-offers__wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 40px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: column;
+    gap: 16px;
   }
-  @media (max-width: 760px) {
-    .special-offers__wrapper {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      gap: 16px;
-    }
-  }
+}
+
+.special-offers__box {
+  margin-top: 40px;
+  height: 200px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 40px;
+}
+
+@media (max-width: 760px) {
   .special-offers__box {
-    margin-top: 40px;
-    height: 200px;
-    width: 100%;
-    border-radius: 4px;
-    padding: 40px;
+    flex-direction: column;
+    margin-top: 0;
   }
-  @media (max-width: 760px) {
-    .special-offers__box {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      margin-top: 0;
-    }
-  }
+}
+
+.special-offers__box_card {
+  background: url("./img/card.png") no-repeat right 30px center;
+  background-color: #FCD5BA;
+}
+
+@media (max-width: 1150px) {
   .special-offers__box_card {
-    background: url("./img/card.png") no-repeat right 30px center;
-    background-color: #FCD5BA;
+    background-size: auto 120px;
+    background-position: auto center;
   }
-  @media (max-width: 1150px) {
-    .special-offers__box_card {
-      background-size: auto 120px;
-      background-position: auto center;
-    }
+}
+
+@media (max-width: 900px) {
+  .special-offers__box_card {
+    background-position: right -40px center;
   }
-  @media (max-width: 900px) {
-    .special-offers__box_card {
-      background-position: right -40px center;
-    }
+}
+
+@media (max-width: 760px) {
+  .special-offers__box_card {
+    background-position: right 10px center;
   }
-  @media (max-width: 760px) {
-    .special-offers__box_card {
-      background-position: right 10px center;
-    }
+}
+
+@media (max-width: 560px) {
+  .special-offers__box_card {
+    background-position: right -50px center;
   }
-  @media (max-width: 560px) {
-    .special-offers__box_card {
-      background-position: right -50px center;
-    }
-  }
+}
+
+.special-offers__box_basket {
+  background: url("./img/basket.png") no-repeat center center;
+  background-color: #E5FFDE;
+}
+
+@media (max-width: 1150px) {
   .special-offers__box_basket {
-    background: url("./img/basket.png") no-repeat center center;
-    background-color: #E5FFDE;
+    background-size: auto 120px;
+    background-position: right 0 center;
   }
-  @media (max-width: 1150px) {
-    .special-offers__box_basket {
-      background-size: auto 120px;
-      background-position: right 0 center;
-    }
+}
+
+@media (max-width: 900px) {
+  .special-offers__box_basket {
+    background-position: right -40px center;
   }
-  @media (max-width: 900px) {
-    .special-offers__box_basket {
-      background-position: right -40px center;
-    }
+}
+
+@media (max-width: 760px) {
+  .special-offers__box_basket {
+    background-position: right 10px center;
   }
-  @media (max-width: 760px) {
-    .special-offers__box_basket {
-      background-position: right 10px center;
-    }
+}
+
+@media (max-width: 560px) {
+  .special-offers__box_basket {
+    background-position: right -50px center;
   }
-  @media (max-width: 560px) {
-    .special-offers__box_basket {
-      background-position: right -50px center;
-    }
-  }
+}
+
+.special-offers__h3 {
+  max-width: 70%;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@media (max-width: 1150px) {
   .special-offers__h3 {
-    max-width: 70%;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 20px;
   }
-  @media (max-width: 1150px) {
-    .special-offers__h3 {
-      font-size: 20px;
-    }
-  }
-  .special-offers__text {
-    max-width: 70%;
-    font-size: 16px;
-    font-weight: 400;
-    padding-top: 8px;
-  }
-  
+}
+
+.special-offers__text {
+  max-width: 70%;
+  font-size: 16px;
+  font-weight: 400;
+  padding-top: 8px;
+}

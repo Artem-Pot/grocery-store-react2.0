@@ -2,15 +2,14 @@
 .our-stores {
   margin-top: 120px;
 }
+
 .our-stores__box-button {
   margin-top: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 24px;
 }
+
 .our-stores__button {
   width: 97px;
   height: 32px;
@@ -21,6 +20,11 @@
   color: #606060;
   text-align: center;
 }
+
+.our-stores__button:hover {
+  cursor: pointer;
+}
+
 .our-stores__button_activ {
   background-color: #70C05B;
   color: #fff;

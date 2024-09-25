@@ -1,6 +1,8 @@
 import React from 'react';
 import './style.css';
 import ArrProducts from '../Products/ArrProducts';
+import { ReactComponent as Favorites } from "./img/favorites.svg";
+
 
 function Product(props) {
   return (
@@ -11,7 +13,7 @@ function Product(props) {
         <a href='/' className="product__link">
             <img src={product.imgProduct} className="product__images" alt="Изображение продукта"/>
         </a>
-            <button className="product__button-favorites" type="button"></button>
+            <button className="product__button-favorites" type="button"><Favorites className='ico-favorites'/></button>
             <span className={props.hiddenProperties === 'true'? 'displayNone' : 'product__sales'}>{product.productSales}</span>
         </div>
         <div className="product__box-price">
