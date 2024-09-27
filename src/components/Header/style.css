@@ -181,8 +181,10 @@
   }
 }
 
-
-
+.header__box-icons a {
+  font-size: 12px;
+  color: #414141;
+}
 
 .header__wrapper-icons {
   display: flex;
@@ -192,9 +194,10 @@
   cursor: pointer;
 }
 
-.header__wrapper-icons:hover path{
-  stroke: #FF6633; 
-  fill: #FF6633;  
+.header__wrapper-icons:hover path, .header__wrapper-icons:hover{
+  cursor: pointer;
+  fill: #FF6633;
+  color: #FF6633; 
 }
 
 .header__img-icons {
@@ -256,6 +259,12 @@
   }
 }
 
+.header__box-profile:hover path, .header__box-profile:hover{
+  cursor: pointer;
+  fill: #FF6633;
+  color: #FF6633; 
+}
+
 .header__img-ava {
   max-width: 40px;
   max-height: 40px;
@@ -272,7 +281,6 @@
 }
 
 .header .button__arrow {
-  background: url("./img/arrow-down.svg") no-repeat;
   width: 24px;
   height: 24px;
   background-size: 24px;

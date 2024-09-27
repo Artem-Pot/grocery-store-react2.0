@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrArticles from './ArrArticles';
+import ArrArticles from './../../helpers/ArrArticles/ArrArticles';
 import './style.css';
 
 function Articles(props) {

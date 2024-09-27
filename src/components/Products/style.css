@@ -152,10 +152,6 @@
   height: 16px;
 }
 
-.product__star:hover {
-  background: url("./img/star-on.svg");
-}
-
 .product__star_on {
   background: url("./img/star-on.svg");
 }

@@ -3,8 +3,8 @@ import './style.css';
 import { ReactComponent as Heart } from "./img/heart.svg";
 import { ReactComponent as Order } from "./img/order.svg";
 import { ReactComponent as ShoppingCart } from "./img/shopping-cart.svg";
-
-import Avatar from './img/avatar.png';
+import Avatar from './img/profile.svg';
+import { ReactComponent as ArrowDown } from './img/arrow-down.svg';
 
 
 function Header() {
@@ -29,12 +29,14 @@ function Header() {
             <button className="button__search"></button>
           </div>
           <div className="header__box-icons">
-            <div className="header__wrapper-icons"><Heart /><span className="header__title">Избранное</span></div>
-            <div className="header__wrapper-icons"><Order /><span className="header__title">Заказы</span></div>
-            <div className="header__wrapper-icons"><ShoppingCart /><span className="header__title">Корзина</span></div>
+          <a href="#"><div className="header__wrapper-icons"><Heart /><span className="header__title">Избранное</span></div></a>
+          <a href="#"><div className="header__wrapper-icons"><Order /><span className="header__title">Заказы</span></div></a>
+          <a href="#"><div className="header__wrapper-icons"><ShoppingCart /><span className="header__title">Корзина</span></div></a>
           </div>
-          <div className="header__box-profile"><img className="header__img-ava" src={Avatar} alt="Аватар"/><span className="header__name-user">Алексей</span>
-            <button className="button__arrow"></button>
+          <div className="header__box-profile">
+            <img className="header__img-ava" src={Avatar} alt="Аватар"/>
+            <span className="header__name-user">Артём</span>
+            <ArrowDown className='button__arrow'/>
           </div>
         </div>
       </div>
