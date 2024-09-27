@@ -1,4 +1,3 @@
-import React from 'react';
 import ArrArticles from './../../helpers/ArrArticles/ArrArticles';
 import './style.css';
 

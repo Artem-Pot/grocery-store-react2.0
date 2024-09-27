@@ -1,4 +1,3 @@
-import React from 'react';
 import Product from '../Products/Product';
 import './style.css';
 

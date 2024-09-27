@@ -1,4 +1,3 @@
-import React from 'react';
 import './style.css';
 import ArrProducts from '../../helpers/ArrProducts/ArrProducts';
 import { ReactComponent as Favorites } from "./img/favorites.svg";

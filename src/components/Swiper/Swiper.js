@@ -1,4 +1,3 @@
-import React from 'react';
 import imgSlide from './img/slide-1.png';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
