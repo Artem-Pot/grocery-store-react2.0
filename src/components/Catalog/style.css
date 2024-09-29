@@ -1,0 +1,102 @@
+/*Страница каталога товаров*/
+.catalog {
+  
+}
+
+.catalog__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog__navigation {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 12px;
+}
+
+.catalog__navigation:last-child{
+  color: #8F8F8F;
+  font-weight: 900;
+}
+
+.catalog__link span{
+  color: #414141;
+}
+
+.catalog__link_activ span{
+  color: #8F8F8F;
+}
+
+.catalog__category-link {
+  display: inline-block;
+	position: relative;    
+	line-height: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.catalog__category-link::after {
+  content: "";  
+	width: 100%;
+	height: 50%;    
+	position: absolute;
+	bottom: 0;      
+	left: 0;   
+	background: transparent;
+	background-image: linear-gradient(180.00deg, rgba(112, 192, 91, 0),rgb(112, 192, 91) 82.813%);
+}
+
+.catalog__category-link:hover::after {
+  content: "";
+	background-image: linear-gradient(180.00deg, rgba(255, 102, 51, 0),rgb(255, 102, 51) 100%);
+}
+
+.catalog__box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.catalog__category {
+  position: relative;
+  max-width: 272px;
+}
+
+.catalog__category_span {
+  position: relative;
+  max-width: 584px;
+}
+
+@media (max-width: 613px) {
+  .catalog__category_span {
+    max-width: 272px;
+  }
+}
+
+.catalog__img {
+  z-index: 1;
+  width: auto;
+  object-fit:cover;
+}
+
+.catalog__gradient {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+  z-index: 3;
+}
+
+.catalog__category span{
+  position: absolute;
+  bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  padding: 8px;
+}

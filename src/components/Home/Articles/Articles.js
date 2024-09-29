@@ -1,4 +1,4 @@
-import ArrArticles from './../../helpers/ArrArticles/ArrArticles';
+import ArrArticles from './../../../helpers/ArrArticles/ArrArticles';
 import './style.css';
 
 function Articles(props) {
@@ -11,7 +11,7 @@ function Articles(props) {
                     </div>
                     <div className="articles__box-articles">
                     {ArrArticles.slice(0, 3).map((articl) => (
-                        <article className="articl">
+                        <article className="articl" key={articl.id}>
                             <img src={articl.imgArticles} className="articl__img" alt="Изображение статьи"/>
                             <div className="articl__box">
                                 <div className='articl__interior'>
