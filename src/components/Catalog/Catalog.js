@@ -1,5 +1,6 @@
 import { ReactComponent as ArrowRight} from './arrow-right.svg';
 import ArrCategory from '../../helpers/ArrCategory/ArrCategory';
+import { NavLink } from "react-router-dom";
 import './style.css';
 
 const Catalog = (props) => {
@@ -17,14 +18,14 @@ const Catalog = (props) => {
                 <div className="catalog__box">
                      
                 {ArrCategory.map((category) => (
-                    <a href="/" className="catalog__category-link" >
-                    <div className="catalog__category catalog__category_span">
-                        <img src={category.imgCategory} className="catalog__img" />
-                        <div className="catalog__gradient">
-                        <span>{category.textCategory}</span>
+                    <NavLink to={category.urlCategory} className="catalog__category-link" key={category.id}>
+                        <div className="catalog__category catalog__category_span" >
+                            <img src={category.imgCategory} className="catalog__img" />
+                            <div className="catalog__gradient" >
+                            <span>{category.textCategory}</span>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </NavLink>
                 ))}
         
                 </div>

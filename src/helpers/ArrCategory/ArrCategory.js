@@ -17,79 +17,79 @@ let ArrCategory = [
         id: 1,
         imgCategory: imgCategory1,
         textCategory:'Молоко, сыр, яйцо',
-
+        urlCategory: 'milk',
     },
     {
         id: 2,
         imgCategory: imgCategory2,
         textCategory:'Хлеб',
-
+        urlCategory: 'bread',
     },
     {
         id: 3,
         imgCategory: imgCategory3,
         textCategory:'Фрукты и овощи',
-
+        urlCategory: 'fruits',
     },
     {
         id: 4,
         imgCategory: imgCategory4,
         textCategory:'Замороженные продукты',
-
+        urlCategory: 'frozen',
     },
     {
         id: 5,
         imgCategory: imgCategory5,
         textCategory:'Напитки',
-
+        urlCategory: 'drinks',
     },
     {
-        id: 5,
+        id: 6,
         imgCategory: imgCategory6,
         textCategory:'Кондитерские изделия',
-
+        urlCategory: 'сonfectionery',
     },
     {
         id: 7,
         imgCategory: imgCategory7,
         textCategory:'Чай, кофе',
-
+        urlCategory: 'tea',
     },
     {
         id: 8,
         imgCategory: imgCategory8,
         textCategory:'Бакалея',
-
+        urlCategory: 'groceries',
     },
     {
         id: 9,
         imgCategory: imgCategory9,
         textCategory:'Здоровое питание',
-
+        urlCategory: 'health',
     },
     {
         id: 10,
         imgCategory: imgCategory10,
         textCategory:'Зоотовары',
-
+        urlCategory: 'pet-supplies',
     },
     {
         id: 11,
         imgCategory: imgCategory11,
         textCategory:'Мясо, птица, колбаса',
-
+        urlCategory: 'meat',
     },
     {
         id: 12,
         imgCategory: imgCategory12,
         textCategory:'Детское питание',
-
+        urlCategory: 'baby-food',
     },
     {
         id: 13,
         imgCategory: imgCategory13,
         textCategory:'Прочие товары',
-
+        urlCategory: 'other-products',
     },
   
 ];
