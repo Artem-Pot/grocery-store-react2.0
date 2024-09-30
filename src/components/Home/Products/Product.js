@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import './style.css';
 import ArrProducts from '../../../helpers/ArrProducts/ArrProducts';
 import { ReactComponent as Favorites } from "./img/favorites.svg";
@@ -9,9 +10,9 @@ function Product(props) {
     {ArrProducts.slice(props.startProducts, props.quantityProducts).map((product) => (
         <div className="product" key={product.id}>
         <div className="product__box-images">
-        <a href='/' className="product__link">
+        <NavLink className="product__link" to={`/product/${product.id}`}>
             <img src={product.imgProduct} className="product__images" alt="Изображение продукта"/>
-        </a>
+        </NavLink>
             <button className="product__button-favorites" type="button"><Favorites className='ico-favorites'/></button>
             <span className={props.hiddenProperties === 'true'? 'displayNone' : 'product__sales'}>{product.productSales}</span>
         </div>
@@ -26,7 +27,7 @@ function Product(props) {
             </div>
         </div>
         <p className="product__name">
-            <a href='/' className="product__link">{product.productName}</a>
+            <NavLink className="product__link" to={`/product/${product.id}`}>{product.productName}</NavLink>
         </p>
         <div className="product__box-rating">
             {ArrProducts.slice(0, product.boxRating).map((product) => ( //вывод рейтинг продукта

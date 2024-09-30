@@ -95,11 +95,14 @@
   color: #70C05B;
   width: 134px;
   height: 40px;
-  padding: 8px;
   border-radius: 4px;
   transition: all 0.5s ease;
   margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .button__articl:hover {
   background-color: #70C05B;
