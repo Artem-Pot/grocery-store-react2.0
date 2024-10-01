@@ -1,11 +1,11 @@
 import CatalogProduct from '../components/Catalog/Catalog';
 
-const Catalog = () => {
+function Catalog(){
     return (
         <>
-            <CatalogProduct />
+            <CatalogProduct nav={'/'} url={'Каталог'} />
         </>
     );
 };
- 
-export default Catalog ;
+
+export default Catalog;

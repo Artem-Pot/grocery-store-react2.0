@@ -1,8 +1,7 @@
 import { NavLink } from "react-router-dom";
 import './style.css';
-import ArrProducts from '../../../helpers/ArrProducts/ArrProducts';
+import ArrProducts from '../../helpers/ArrProducts/ArrProducts';
 import { ReactComponent as Favorites } from "./img/favorites.svg";
-
 
 function Product(props) {
   return (

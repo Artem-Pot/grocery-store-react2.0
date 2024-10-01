@@ -1,0 +1,20 @@
+.navigation {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 12px;
+  }
+  
+  .navigation:last-child{
+    color: #8F8F8F;
+    font-weight: 900;
+  }
+  
+  .navigation__link span{
+    color: #414141;
+  }
+  
+  .navigation__link_activ span{
+    color: #8F8F8F;
+  }

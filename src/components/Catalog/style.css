@@ -8,27 +8,6 @@
   flex-direction: column;
 }
 
-.catalog__navigation {
-  height: 72px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-size: 12px;
-}
-
-.catalog__navigation:last-child{
-  color: #8F8F8F;
-  font-weight: 900;
-}
-
-.catalog__link span{
-  color: #414141;
-}
-
-.catalog__link_activ span{
-  color: #8F8F8F;
-}
-
 .catalog__category-link {
   display: inline-block;
 	position: relative;    

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-import Product from '../Products/Product';
+import Product from '../../Products/Product';
 import './style.css';
 
 function NewItems(props) {
