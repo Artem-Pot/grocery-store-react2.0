@@ -1,0 +1,189 @@
+/* Карточка товара*/
+.card__card-product {
+
+}
+
+.card__card-product > span {
+    color: rgb(65, 65, 65);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.card__box-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 32px;
+    max-width: 556px;
+}
+
+.card__product-article {
+    color: rgb(65, 65, 65);
+    font-size: 12px;
+    line-height: 150%;
+}
+
+.card__box-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 8px;
+}
+
+.card__rating-text {
+    margin-left: 8px;
+}
+
+.card__button {
+    position: relative;
+    width: 132px;
+    height: 32px;
+    padding-left: 20px;
+    border-radius: 5px;
+    color: rgb(96, 96, 96);
+    font-size: 12px;
+    line-height: 150%;
+}
+
+.card__button:hover {
+    background-color: burlywood;
+}
+
+.card__button::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 4px;
+    width: 24px;
+    height: 24px;
+}
+
+.card__button-share::before {
+    background: url(./img/share.svg);
+}
+
+.card__button-favorites::before {
+    background: url(./img/heart.svg);
+}
+
+
+/* Блок изображений карточки*/
+.card__box-images {
+    display: flex;
+    max-width: 584px;
+}
+
+.card__box-small {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: darkblue;
+    height: 496px;
+}
+
+.card__small {
+    
+}
+
+.card__small:hover {
+    cursor: pointer;
+    outline: 1px solid red;
+    transition: 3s;
+}
+
+
+.card__images {
+
+}
+
+.card__images_small {
+    width: 64px;
+    height: auto;
+}
+
+.card__big {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 504px;
+    height: 496px;
+    position: relative;
+}
+
+.card__images_big {
+    max-width: 504px;
+    max-height: 496px;
+    background-color: chocolate;
+    background-size: cover;
+}
+
+.card__sales {
+    position: absolute;
+    background-color: #FF6633;
+    padding: 4px 8px;
+    border-radius: 4px;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+}
+
+/*Блок информации карточки*/
+.card__box-information {
+
+}
+
+.card___box-price {
+
+}
+
+.card___price {
+
+}
+
+.card___price-nocart {
+
+}
+
+.card___title {
+
+}
+
+.card__button-buy {
+
+}
+
+.card__bonus {
+
+}
+
+.card__button-decrease {
+
+}
+
+.card__box-characteristics {
+
+}
+
+.card__characteristics {
+
+}
+
+.card__characteristics-left {
+
+}
+
+.card__characteristics-right {
+
+}
+
+/*Блок с похожими товарами*/
+.card__similar {
+
+}
+
+.card__similar-product {
+
+}

@@ -1,6 +1,6 @@
 //Карточка продукта
 import "./style.css";
-import imgProduct from "../../../helpers/ArrProducts/img/product-9.png";
+import imgProduct from "../../../helpers/ArrProducts/img/product-22.png";
 
 function ProductCard() {
     return (
@@ -9,17 +9,41 @@ function ProductCard() {
                 <span>Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г</span>
                 <div className="card__box-button">
                     <span className="card__product-article">арт. 371431</span>
-                    <div className="card__box-Rating"></div>
-                    <button className="card__button-share" type="button">Поделиться</button>
-                    <button className="card__button-favorites" type="button">В избранное</button>
+
+                    <div className="card__box-rating">
+                            <span className="product__star product__star_on"></span>
+                            <span className="product__star product__star_on"></span>
+                            <span className="product__star product__star_on"></span>
+                            <span className="product__star product__star_on"></span>
+                            <span className="product__star"></span>
+
+                            <span className="card__rating-text"><a href="/">3 отзыва</a></span>
+
+                    </div>
+
+                    <button className="card__button card__button-share" type="button">Поделиться</button>
+                    <button className="card__button card__button-favorites" type="button">В избранное</button>
                 </div>
 
                 <div className="card__box-images">
-                    <div className="card__images-small">
-                        <img src={imgProduct} className="card__images_small" alt="Изображение продукта"/>
+                    <div className="card__box-small">
+                        <div className="card__small">
+                            <img src={imgProduct} className="card__images card__images_small" alt="Изображение продукта"/>
+                        </div>
+                        <div className="card__small">
+                            <img src={imgProduct} className="card__images card__images_small" alt="Изображение продукта"/>
+                        </div>
+                        <div className="card__small">
+                            <img src={imgProduct} className="card__images card__images_small" alt="Изображение продукта"/>
+                        </div>
+                        <div className="card__small">
+                            <img src={imgProduct} className="card__images card__images_small" alt="Изображение продукта"/>
+                        </div>
                     </div>
-                    <div className="card__images-big">
-                        <img src={imgProduct} className="card__images_big" alt="Изображение продукта" />
+
+
+                    <div className="card__big">
+                        <img src={imgProduct} className="card__images card__images_big" alt="Изображение продукта" />
                         <span className="card__sales">-50%</span>
                     </div>
                 </div>
@@ -61,22 +85,22 @@ function ProductCard() {
                     <span>Похожие</span>
                     <div className="card__box-similar">
                         <div className="card__similar-product">
-                            <img src={imgProduct} className="card__images_big" alt="Изображение продукта" />
+                            <img src={imgProduct} className="card__images card__images_small" alt="Изображение продукта" />
                             <span>200 ₽</span>
                         </div>
                     
                     <div className="card__similar-product">
-                        <img src={imgProduct} className="card__images_big" alt="Изображение продукта" />
+                        <img src={imgProduct} className="card__images card__images_small" alt="Изображение продукта" />
                         <span>300 ₽</span>
                     </div>
 
                     <div className="card__similar-product">
-                        <img src={imgProduct} className="card__images_big" alt="Изображение продукта" />
+                        <img src={imgProduct} className="card__images card__images_small" alt="Изображение продукта" />
                         <span>250 ₽</span>
                     </div>
 
                     <div className="card__similar-product">
-                        <img src={imgProduct} className="card__images_big" alt="Изображение продукта" />
+                        <img src={imgProduct} className="card__images card__images_small" alt="Изображение продукта" />
                         <span>210 ₽</span>
                     </div>
 
