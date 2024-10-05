@@ -84,11 +84,11 @@ function ProductCard(props) {
                         <div className="card__box-characteristics">
                             <div className="card__characteristics">
                                 <span className="card__characteristics-left">Бренд</span>
-                                <span className="card__characteristics-right">ПРОСТОКВАШИНО</span>
+                                <span className="card__characteristics-right">{idProduct.productBrand}</span>
                             </div>
                             <div className="card__characteristics">
                                 <span className="card__characteristics-left">Страна производителя</span>
-                                <span className="card__characteristics-right">Россия</span>
+                                <span className="card__characteristics-right">{idProduct.productCountry}</span>
                             </div>
                             <div className="card__characteristics">
                                 <span className="card__characteristics-left">Упаковка</span>

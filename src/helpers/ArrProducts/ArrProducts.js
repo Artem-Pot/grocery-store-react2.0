@@ -32,6 +32,8 @@ let ArrProducts = [
         productNoCart:'48,00',
         productName: 'Г/Ц Блинчики с мясом вес, Россия',
         productBrand: 'РОГАЧЕВ',
+        productCountry: 'Россия',
+        productWeight: '200г',
         boxRating: '3',
     },
     {
@@ -42,6 +44,8 @@ let ArrProducts = [
         productNoCart:'60,00',
         productName: 'Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное 1л',
         productBrand: 'Простоквашино',
+        productCountry: 'Россия',
+        productWeight: '987г',
         boxRating: '4',
     },
     {
@@ -52,6 +56,8 @@ let ArrProducts = [
         productNoCart:'82,00',
         productName: 'Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскано',
         productBrand: 'МЯСНАЯ ИСТОРИЯ',
+        productCountry: 'Россия',
+        productWeight: '450г',
         boxRating: '4',
     },
     {
@@ -62,6 +68,8 @@ let ArrProducts = [
         productNoCart:'87,00',
         productName: 'Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и сыром',
         productBrand: 'МЯСНАЯ ИСТОРИЯ',
+        productCountry: 'Россия',
+        productWeight: '450г',
         boxRating: '5',
     },
     {
@@ -72,6 +80,8 @@ let ArrProducts = [
         productNoCart:'599,00',
         productName: 'Колбаса сырокопченая 0,5 кг',
         productBrand: 'Толли',
+        productCountry: 'Россия',
+        productWeight: '500г',
         boxRating: '4',
     },
     {
@@ -82,6 +92,8 @@ let ArrProducts = [
         productNoCart:'90',
         productName: 'Колбаса «ДЕСНА-ПОЛЕСЬЕ 0.4 кг»',
         productBrand: 'БРЯНСКСЕЛЬМАШ',
+        productCountry: 'Россия',
+        productWeight: '400г',
         boxRating: '5',
     },
     {
@@ -92,6 +104,8 @@ let ArrProducts = [
         productNoCart:'156,50',
         productName: 'Сыр Dorbly 300гр.',
         productBrand: 'Dorbly',
+        productCountry: 'Россия',
+        productWeight: '300г',
         boxRating: '5',
     },
     {
@@ -102,6 +116,8 @@ let ArrProducts = [
         productNoCart:'90',
         productName: 'Молоко сгущенное РОГАЧЕВ Егорка, цельное с сахаром',
         productBrand: 'РОГАЧЕВ',
+        productCountry: 'Россия',
+        productWeight: '400г',
         boxRating: '4',
     },
     {
@@ -112,6 +128,8 @@ let ArrProducts = [
         productNoCart:'215',
         productName: 'Масло сливочное 82% Простоквашино',
         productBrand: 'Простоквашино',
+        productCountry: 'Россия',
+        productWeight: '200г',
         boxRating: '5',
     },
     {
@@ -122,6 +140,8 @@ let ArrProducts = [
         productNoCart:'34',
         productName: 'Йогурт Fruttis 70гр. Дыня',
         productBrand: 'Fruttis',
+        productCountry: 'Россия',
+        productWeight: '70г',
         boxRating: '5',
     },
     {
@@ -132,6 +152,8 @@ let ArrProducts = [
         productNoCart:'34',
         productName: 'Йогурт Fruttis 70гр. Ягода',
         productBrand: 'Fruttis',
+        productCountry: 'Россия',
+        productWeight: '70г',
         boxRating: '5',
     },
     {
@@ -142,6 +164,8 @@ let ArrProducts = [
         productNoCart:'120.99',
         productName: 'Томатная паста Global Village 270г',
         productBrand: 'Global Village',
+        productCountry: 'Россия',
+        productWeight: '270г',
         boxRating: '5',
     },  
     {
@@ -152,6 +176,8 @@ let ArrProducts = [
         productNoCart:'129.99',
         productName: 'Нектар Global Village ананасовый 950мл',
         productBrand: 'Global Village',
+        productCountry: 'Россия',
+        productWeight: '950г',
         boxRating: '5',
     }, 
     {
@@ -162,6 +188,8 @@ let ArrProducts = [
         productNoCart:'185.29',
         productName: 'Огурцы Global Village корнишоны маринованные 720мл',
         productBrand: 'Global Village',
+        productCountry: 'Россия',
+        productWeight: '720г',
         boxRating: '4',
     },
     {
@@ -172,6 +200,8 @@ let ArrProducts = [
         productNoCart:'140.99',
         productName: 'Огурцы соленые Global Village 680г',
         productBrand: 'Global Village',
+        productCountry: 'Россия',
+        productWeight: '680г',
         boxRating: '5',
     },
     {
@@ -182,6 +212,8 @@ let ArrProducts = [
         productNoCart:'146.99',
         productName: 'Смесь овощная Global Village 8 Овощей 400г',
         productBrand: 'Global Village',
+        productCountry: 'Россия',
+        productWeight: '400г',
         boxRating: '5',
     }, 
     {
@@ -192,6 +224,8 @@ let ArrProducts = [
         productNoCart:'319.99',
         productName: 'Картофель Global Village Selection фри 700г',
         productBrand: 'Global Village',
+        productCountry: 'Россия',
+        productWeight: '700г',
         boxRating: '5',
     }, 
     {
@@ -202,6 +236,8 @@ let ArrProducts = [
         productNoCart:'85,79',
         productName: 'Печенье Шарлиз сдобное клубника 137г',
         productBrand: 'Шарлиз',
+        productCountry: 'Россия',
+        productWeight: '137г',
         boxRating: '5',
     },
     {
@@ -212,6 +248,8 @@ let ArrProducts = [
         productNoCart:'115,99',
         productName: 'Печенье Шарлиз Американо сдобное 250г',
         productBrand: 'Шарлиз',
+        productCountry: 'Россия',
+        productWeight: '250г',
         boxRating: '5',
     },
     {
@@ -222,6 +260,8 @@ let ArrProducts = [
         productNoCart:'45,99',
         productName: 'Вода минеральная Societe Minerale газированная 1.5л',
         productBrand: 'Societe Minerale',
+        productCountry: 'Россия',
+        productWeight: '1600г',
         boxRating: '5',
     },
     {
@@ -232,6 +272,8 @@ let ArrProducts = [
         productNoCart:'65,99',
         productName: 'Вода минеральная Societe Minerale газированная 1.5л',
         productBrand: 'Societe Minerale',
+        productCountry: 'Россия',
+        productWeight: '1600г',
         boxRating: '4',
     },
     {
@@ -242,6 +284,8 @@ let ArrProducts = [
         productNoCart:'450,99',
         productName: 'Форель Fish House слабосоленая филе-кусок 200г',
         productBrand: 'Fish House',
+        productCountry: 'Россия',
+        productWeight: '200г',
         boxRating: '5',
     },
     {
@@ -252,6 +296,8 @@ let ArrProducts = [
         productNoCart:'105,99',
         productName: 'Икра имитированная Fish House красная 220г',
         productBrand: 'Fish House',
+        productCountry: 'Россия',
+        productWeight: '220г',
         boxRating: '5',
     },
     {
@@ -262,7 +308,10 @@ let ArrProducts = [
         productNoCart:'96,99',
         productName: 'Карбонад Мясная Ферма из свинины копчено-вареный 100г',
         productBrand: 'Мясная Ферма',
+        productCountry: 'Россия',
+        productWeight: '100г',
         boxRating: '4',
+
     },
 ];
 
