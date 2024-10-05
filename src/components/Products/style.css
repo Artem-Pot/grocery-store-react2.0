@@ -12,6 +12,7 @@
   overflow: hidden;
   background-color: #fff;
   gap: 8px;
+  position: relative;
 }
 
 @media (max-width: 960px) {
@@ -39,11 +40,11 @@
   position: absolute;
   top: 12px;
   right: 12px;
-  /* background: url("./img/favorites.svg"); */
   width: 32px;
   height: 32px;
   border-radius: 4px;
   outline: none;
+  z-index: 2;
 }
 
 .product__button-favorites:hover path {

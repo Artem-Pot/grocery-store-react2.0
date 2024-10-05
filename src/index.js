@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
 import Catalog from './pages/Catalog';
 import Card from './pages/Card';
+// import ProductCard from './components/Card/ProductCard/ProductCard';
 
 import ScrollToTop from './utils/scrollTop'; //при переходе на другую страницу - автоматически листает вверх
 
@@ -20,9 +21,10 @@ root.render(
         <Header />
         
         <Routes>
-            <Route path="/" element={<Home/>}></Route>
-            <Route path="catalog" element={<Catalog/>}></Route>
-            <Route path="card" element={<Card/>}></Route>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="catalog" element={<Catalog /> }></Route>
+            <Route path="/card/:id"  element={<Card /> }></Route>
+
         </Routes>
 
         <Footer />

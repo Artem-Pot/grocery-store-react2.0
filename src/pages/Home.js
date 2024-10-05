@@ -1,18 +1,16 @@
 import Swiper from '../components/Home/Swiper/Swiper';
-import Stock from '../components/Home/Stock/Stock';
-import NewItems from '../components/Home/NewItems/NewItems';
-import Earlier from '../components/Home/Earlier/Earlier';
 import SpecialOffers from '../components/Home/SpecialOffers/SpecialOffers';
 import OurStores from '../components/Home/OurStores/OurStores';
 import Articles from '../components/Home/Articles/Articles';
+import ProductBlock from '../components/ProductBlock/ProductBlock';
 
 function Home(props) {
     return (
         <>
             <Swiper />
-            <Stock text={'Акции'} textall={'Все акции'}/>
-            <NewItems text={'Новинки'} textall={'Все новинки'}/>
-            <Earlier text={'Покупали ранее'} textall={'Все покупки'}/>
+            <ProductBlock text={'Акции'} textAll={'Все акции'} startProducts={6} quantityProducts={10} hiddenProperties='false' hiddenTextall='false' />
+            <ProductBlock text={'Новинки'} textAll={'Все новинки'} startProducts={1} quantityProducts={5} hiddenProperties='false' hiddenTextall='false' />
+            <ProductBlock text={'Покупали ранее'} textAll={'Все покупки'} startProducts={4} quantityProducts={8} hiddenProperties='true' hiddenTextall='false' />
             <SpecialOffers />
             <OurStores />
             <Articles />
@@ -21,3 +19,4 @@ function Home(props) {
     }
 
 export default Home;
+
