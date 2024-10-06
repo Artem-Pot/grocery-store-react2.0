@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import ProductCard from '../components/Card/ProductCard/ProductCard';
 import Navigation from '../components/Navigation/Navigation';
 import ProductBlock from '../components/ProductBlock/ProductBlock';
-import ArrProducts from '../helpers/ArrProducts/ArrProducts';
+
 
 function Card(props){
     const location = +(useLocation().pathname.slice(6)) - 1; //получение номера id товара через URL

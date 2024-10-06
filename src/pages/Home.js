@@ -8,9 +8,9 @@ function Home(props) {
     return (
         <>
             <Swiper />
-            <ProductBlock text={'Акции'} textAll={'Все акции'} startProducts={6} quantityProducts={10} hiddenProperties='false' hiddenTextall='false' />
-            <ProductBlock text={'Новинки'} textAll={'Все новинки'} startProducts={1} quantityProducts={5} hiddenProperties='false' hiddenTextall='false' />
-            <ProductBlock text={'Покупали ранее'} textAll={'Все покупки'} startProducts={4} quantityProducts={8} hiddenProperties='true' hiddenTextall='false' />
+            <ProductBlock text={'Акции'} textAll={'Все акции'} startProducts={13} quantityProducts={17} hiddenProperties='false' hiddenTextall='false' />
+            <ProductBlock text={'Новинки'} textAll={'Все новинки'} startProducts={8} quantityProducts={12} hiddenProperties='false' hiddenTextall='false' />
+            <ProductBlock text={'Покупали ранее'} textAll={'Все покупки'} startProducts={17} quantityProducts={21} hiddenProperties='true' hiddenTextall='false' />
             <SpecialOffers />
             <OurStores />
             <Articles />

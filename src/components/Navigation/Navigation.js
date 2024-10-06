@@ -3,10 +3,12 @@ import './style.css';
 import { ReactComponent as ArrowRight} from './arrow-right.svg';
 
 
+
 function Navigation(props) {
+    
     return (
         <nav className="navigation">
-            <NavLink to={'/'} className="navigation__link"><span>Главая</span></NavLink>
+            <NavLink to={'/'} className="navigation__link"><span>Главная</span></NavLink>
             <ArrowRight />
             <span>{props.url}</span>
         </nav>

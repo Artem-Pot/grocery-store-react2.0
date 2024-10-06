@@ -28,12 +28,22 @@
   }
 }
 
+.product__box {
+
+}
+
 .product__box-images {
+  width: 272px;
+  height: 160px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .product__images {
-  width: 100%;
+  max-width: 272px;
+  max-height: 160px;
 }
 
 .product__button-favorites {
@@ -126,7 +136,6 @@
 .product__name {
   font-size: 16px;
   padding: 0 8px;
-  align-self: flex-start;
 }
 
 .product__link {
@@ -142,9 +151,10 @@
 
 .product__box-rating {
   display: flex;
-  align-self: start;
+  align-self: end;
   gap: 4px;
   padding: 0 8px;
+  align-self: start;
 }
 
 .product__star {

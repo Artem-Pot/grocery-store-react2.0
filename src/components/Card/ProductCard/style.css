@@ -97,6 +97,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .card__small:hover {
@@ -107,7 +108,7 @@
 
 
 .card__images_small {
-    width: 64;
+    width: 64px;
     height: 86px;
     object-fit: contain;
 }
@@ -217,7 +218,7 @@
     line-height: 150%;
     padding-left: 40px;
     position: relative;
-    width: 212px;
+    width: 250px;
     height: 32px;
     display: flex;
     align-items: center;
@@ -320,6 +321,7 @@
 }
 
 .card__similar-product img{
+    height: 47px;
     object-fit: contain;
 }
 
