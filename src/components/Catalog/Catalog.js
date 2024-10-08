@@ -3,14 +3,14 @@ import Navigation from '../Navigation/Navigation';
 import { NavLink } from "react-router-dom";
 import './style.css';
 
-const Catalog = (props) => {
+const Catalog = (props) => {    
     return (
         <>
         <section className="catalog">
         <div className="container">
             <div className="catalog__wrapper">
 
-                <Navigation url={props.url}/>
+                <Navigation url={props.catalog}/> 
 
                 <h2 className="title-h2">Каталог</h2>
                 <div className="catalog__box">

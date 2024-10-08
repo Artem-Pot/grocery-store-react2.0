@@ -1,9 +1,9 @@
 import CatalogProduct from '../components/Catalog/Catalog';
 
-function Catalog(){
+function Catalog(props){
     return (
         <>
-            <CatalogProduct nav={'/'} url={'Каталог'} />
+            <CatalogProduct nav={'/'} catalog={'Каталог'} arrowRight={'false'}/>
         </>
     );
 };

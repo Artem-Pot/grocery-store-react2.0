@@ -75,13 +75,13 @@ let ArrCategory = [
     },
     {
         id: 11,
-        imgCategory: imgCategory11,
-        textCategory:'Мясо, птица, колбаса',
+        imgCategory: imgCategory12,
+        textCategory:'Мясо, птица, рыба, колбаса',
         urlCategory: 'meat',
     },
     {
         id: 12,
-        imgCategory: imgCategory12,
+        imgCategory: imgCategory11,
         textCategory:'Детское питание',
         urlCategory: 'baby-food',
     },

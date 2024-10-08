@@ -23,7 +23,23 @@ import imgProduct22 from './img/product-22.png';
 import imgProduct23 from './img/product-23.png';
 import imgProduct24 from './img/product-24.png';
 
-let ArrProducts = [
+import ArrReviews from '../ArrReviews/ArrReviews';
+
+function averageRatingValue(idProduct) { //среднее значение рейтинга товара
+    let test = ArrReviews[idProduct].review;
+    // console.log(test);
+    //количество отзывов
+    for (let i = 0; i < test.length; i++) {
+        // console.log(test[i].id);
+    }
+}
+
+averageRatingValue(1);
+
+
+
+
+const ArrProducts = [
     {
         id: 1,
         imgProduct: imgProduct1,
@@ -35,6 +51,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '200г',
         boxRating: '3',
+        productCategory: 'Замороженные продукты',
+        productArticl: '371431',
     },
     {
         id: 2,
@@ -47,6 +65,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '987г',
         boxRating: '4',
+        productCategory: 'Молоко, сыр, яйцо',
+        productArticl: '371432',
     },
     {
         id: 3,
@@ -59,6 +79,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '450г',
         boxRating: '4',
+        productCategory: 'Мясо, птица, рыба, колбаса',
+        productArticl: '371433',
     },
     {
         id: 4,
@@ -71,6 +93,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '350г',
         boxRating: '5',
+        productCategory: 'Мясо, птица, рыба, колбаса',
+        productArticl: '371434',
     },
     {
         id: 5,
@@ -83,6 +107,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '350г',
         boxRating: '4',
+        productCategory: 'Мясо, птица, рыба, колбаса',
+        productArticl: '371435',
     },
     {
         id: 6,
@@ -95,6 +121,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '400г',
         boxRating: '5',
+        productCategory: 'Мясо, птица, рыба, колбаса',
+        productArticl: '371436',
     },
     {
         id: 7,
@@ -107,6 +135,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '300г',
         boxRating: '5',
+        productCategory: 'Молоко, сыр, яйцо',
+        productArticl: '371437',
     },
     {
         id: 8,
@@ -119,6 +149,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '400г',
         boxRating: '4',
+        productCategory: 'Молоко, сыр, яйцо',
+        productArticl: '371438',
     },
     {
         id: 9,
@@ -131,6 +163,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '200г',
         boxRating: '5',
+        productCategory: 'Молоко, сыр, яйцо',
+        productArticl: '371439',
     },
     {
         id: 10,
@@ -143,6 +177,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '70г',
         boxRating: '5',
+        productCategory: 'Молоко, сыр, яйцо',
+        productArticl: '371440',
     },
     {
         id: 11,
@@ -155,6 +191,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '70г',
         boxRating: '5',
+        productCategory: 'Молоко, сыр, яйцо',
+        productArticl: '371441',
     },
     {
         id: 12,
@@ -167,6 +205,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '270г',
         boxRating: '5',
+        productCategory: 'Фрукты и овощи',
+        productArticl: '371442',
     },  
     {
         id: 13,
@@ -179,6 +219,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '950г',
         boxRating: '5',
+        productCategory: 'Напитки',
+        productArticl: '371443',
     }, 
     {
         id: 14,
@@ -191,6 +233,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '720г',
         boxRating: '4',
+        productCategory: 'Фрукты и овощи',
+        productArticl: '371444',
     },
     {
         id: 15,
@@ -203,6 +247,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '680г',
         boxRating: '5',
+        productCategory: 'Фрукты и овощи',
+        productArticl: '371445',
     },
     {
         id: 16,
@@ -215,6 +261,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '400г',
         boxRating: '5',
+        productCategory: 'Фрукты и овощи',
+        productArticl: '371446',
     }, 
     {
         id: 17,
@@ -227,6 +275,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '700г',
         boxRating: '5',
+        productCategory: 'Фрукты и овощи',
+        productArticl: '371447',
     }, 
     {
         id: 18,
@@ -239,6 +289,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '137г',
         boxRating: '5',
+        productCategory: 'Кондитерские изделия',
+        productArticl: '371448',
     },
     {
         id: 19,
@@ -251,6 +303,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '250г',
         boxRating: '5',
+        productCategory: 'Кондитерские изделия',
+        productArticl: '371449',
     },
     {
         id: 20,
@@ -263,6 +317,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '1600г',
         boxRating: '5',
+        productCategory: 'Напитки',
+        productArticl: '371450',
     },
     {
         id: 21,
@@ -274,7 +330,9 @@ let ArrProducts = [
         productBrand: 'Societe Minerale',
         productCountry: 'Россия',
         productWeight: '1600г',
-        boxRating: '4',
+        boxRating: '0',
+        productCategory: 'Напитки',
+        productArticl: '371451',
     },
     {
         id: 22,
@@ -287,6 +345,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '200г',
         boxRating: '5',
+        productCategory: 'Мясо, птица, рыба, колбаса',
+        productArticl: '371452',
     },
     {
         id: 23,
@@ -299,6 +359,8 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '220г',
         boxRating: '5',
+        productCategory: 'Мясо, птица, рыба, колбаса',
+        productArticl: '371453',
     },
     {
         id: 24,
@@ -311,9 +373,9 @@ let ArrProducts = [
         productCountry: 'Россия',
         productWeight: '100г',
         boxRating: '4',
-
+        productCategory: 'Мясо, птица, рыба, колбаса',
+        productArticl: '371454',
     },
 ];
-
 
 export default ArrProducts;

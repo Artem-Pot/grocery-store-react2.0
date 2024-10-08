@@ -1,14 +1,40 @@
 //Карточка продукта
 import "./style.css";
 import ArrProducts from '../../../helpers/ArrProducts/ArrProducts';
+import ArrReviews from "../../../helpers/ArrReviews/ArrReviews";
 
 import imgProduct from "../../../helpers/ArrProducts/img/product-22.png";
 import imgProduct2 from "../../../helpers/ArrProducts/img/product-21.png";
 import imgProduct3 from "../../../helpers/ArrProducts/img/product-20.png";
 import imgProduct4 from "../../../helpers/ArrProducts/img/product-15.png";
 
+//количество отзывов
+function numberReviews(id) { 
+   let sum = ArrReviews[id - 1].review.length;
+   return sum;
+}
+
+//функция меняющая окончания слова 'отзыв'
+function changesEndingsWords(count) {
+    if (count % 10 === 1 && count % 100 !== 11) {
+        return 'отзыв';
+    } else if ((count % 10 >= 2 && count % 10 <= 4) && (count % 100 < 12 || count % 100 > 14)) {
+        return 'отзыва';
+    } else {
+        return 'отзывов';
+    }
+}
+
+//средний бал отзыва
+function calculateAverageRating(id) {
+    let sum = ArrReviews[id].review;    
+    return Math.floor (sum.reduce((sum, product) => sum + product.rating, 0) / sum.length);
+}
+
 function ProductCard(props) {
-    const idProduct = ArrProducts[props.idProduct];  //вывод нужного товара полученного через пропс по id    
+    const idProduct = ArrProducts[props.idProduct];  //вывод нужного товара полученного через пропс по id
+
+    
     return (
         <>
             <div className="card__card-product">
@@ -17,24 +43,29 @@ function ProductCard(props) {
                     <span className="card__name">{idProduct.productName}</span>
 
                     <div className="card__box-button">
-                        <span className="card__product-article">арт. 371431</span>
+                        <span className="card__product-article">арт. {idProduct.productArticl}</span>
 
-                        <div className="card__box-rating">
-                                <span className="product__star product__star_on"></span>
-                                <span className="product__star product__star_on"></span>
-                                <span className="product__star product__star_on"></span>
-                                <span className="product__star product__star_on"></span>
-                                <span className="product__star"></span>
+                        <div className="product__box-rating card__box-rating">
 
-                                <span className="card__rating-text"><a href="/">3 отзыва</a></span>
 
+                            {ArrProducts.slice(0, calculateAverageRating(idProduct.id)).map((product) => ( //вывод рейтинг продукта
+                                <span className="product__star product__star_on" key={product.id}></span>
+                            ))}
+
+                            {ArrProducts.slice(0, 5 - calculateAverageRating(idProduct.id)).map((product) => ( //вывод затемнённых звёзд если у товара не 5 звёзд рейтинга
+                                <span className="product__star" key={product.id}></span>
+                            ))}
+
+
+
+                            <span className="card__rating-text"><a href="/">{numberReviews(idProduct.id)} {changesEndingsWords(numberReviews(idProduct.id))}</a></span>
                         </div>
-
+                    
                         <button className="card__button card__button-share" type="button">Поделиться</button>
                         <button className="card__button card__button-favorites" type="button">В избранное</button>
                     </div>
                 </div>
-
+                            
                 <div className="card__box">
 
                     <div className="card__box-images">
@@ -76,7 +107,7 @@ function ProductCard(props) {
                         </div>
                         
                         <button className="card__button-buy" type="button">В корзину</button>
-                        <span className="card__bonus">Количество бонусов за покупк: {Math.floor(idProduct.productNoCart / 10)}</span>
+                        <span className="card__bonus">Количество бонусов за покупку: {Math.floor(idProduct.productNoCart / 10)}</span>
                         <button className="card__button-decrease" type="button">Уведомить о снижении цены</button>
 
                         <div className="card__box-characteristics">
@@ -137,6 +168,3 @@ function ProductCard(props) {
 };
 
 export default ProductCard;
-
-
-//<span className="card__name">Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г</span>
