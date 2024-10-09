@@ -23,22 +23,6 @@ import imgProduct22 from './img/product-22.png';
 import imgProduct23 from './img/product-23.png';
 import imgProduct24 from './img/product-24.png';
 
-import ArrReviews from '../ArrReviews/ArrReviews';
-
-function averageRatingValue(idProduct) { //среднее значение рейтинга товара
-    let test = ArrReviews[idProduct].review;
-    // console.log(test);
-    //количество отзывов
-    for (let i = 0; i < test.length; i++) {
-        // console.log(test[i].id);
-    }
-}
-
-averageRatingValue(1);
-
-
-
-
 const ArrProducts = [
     {
         id: 1,
@@ -50,7 +34,6 @@ const ArrProducts = [
         productBrand: 'РОГАЧЕВ',
         productCountry: 'Россия',
         productWeight: '200г',
-        boxRating: '3',
         productCategory: 'Замороженные продукты',
         productArticl: '371431',
     },
@@ -64,7 +47,6 @@ const ArrProducts = [
         productBrand: 'Простоквашино',
         productCountry: 'Россия',
         productWeight: '987г',
-        boxRating: '4',
         productCategory: 'Молоко, сыр, яйцо',
         productArticl: '371432',
     },
@@ -78,7 +60,6 @@ const ArrProducts = [
         productBrand: 'МЯСНАЯ ИСТОРИЯ',
         productCountry: 'Россия',
         productWeight: '450г',
-        boxRating: '4',
         productCategory: 'Мясо, птица, рыба, колбаса',
         productArticl: '371433',
     },
@@ -92,7 +73,6 @@ const ArrProducts = [
         productBrand: 'Папа может',
         productCountry: 'Россия',
         productWeight: '350г',
-        boxRating: '5',
         productCategory: 'Мясо, птица, рыба, колбаса',
         productArticl: '371434',
     },
@@ -106,7 +86,6 @@ const ArrProducts = [
         productBrand: 'Ближние горки',
         productCountry: 'Россия',
         productWeight: '350г',
-        boxRating: '4',
         productCategory: 'Мясо, птица, рыба, колбаса',
         productArticl: '371435',
     },
@@ -120,7 +99,6 @@ const ArrProducts = [
         productBrand: 'БРЯНСКСЕЛЬМАШ',
         productCountry: 'Россия',
         productWeight: '400г',
-        boxRating: '5',
         productCategory: 'Мясо, птица, рыба, колбаса',
         productArticl: '371436',
     },
@@ -134,7 +112,6 @@ const ArrProducts = [
         productBrand: 'Dorbly',
         productCountry: 'Россия',
         productWeight: '300г',
-        boxRating: '5',
         productCategory: 'Молоко, сыр, яйцо',
         productArticl: '371437',
     },
@@ -148,7 +125,6 @@ const ArrProducts = [
         productBrand: 'РОГАЧЕВ',
         productCountry: 'Россия',
         productWeight: '400г',
-        boxRating: '4',
         productCategory: 'Молоко, сыр, яйцо',
         productArticl: '371438',
     },
@@ -162,7 +138,6 @@ const ArrProducts = [
         productBrand: 'Простоквашино',
         productCountry: 'Россия',
         productWeight: '200г',
-        boxRating: '5',
         productCategory: 'Молоко, сыр, яйцо',
         productArticl: '371439',
     },
@@ -176,7 +151,6 @@ const ArrProducts = [
         productBrand: 'Fruttis',
         productCountry: 'Россия',
         productWeight: '70г',
-        boxRating: '5',
         productCategory: 'Молоко, сыр, яйцо',
         productArticl: '371440',
     },
@@ -190,7 +164,6 @@ const ArrProducts = [
         productBrand: 'Fruttis',
         productCountry: 'Россия',
         productWeight: '70г',
-        boxRating: '5',
         productCategory: 'Молоко, сыр, яйцо',
         productArticl: '371441',
     },
@@ -204,7 +177,6 @@ const ArrProducts = [
         productBrand: 'Global Village',
         productCountry: 'Россия',
         productWeight: '270г',
-        boxRating: '5',
         productCategory: 'Фрукты и овощи',
         productArticl: '371442',
     },  
@@ -218,7 +190,6 @@ const ArrProducts = [
         productBrand: 'Global Village',
         productCountry: 'Россия',
         productWeight: '950г',
-        boxRating: '5',
         productCategory: 'Напитки',
         productArticl: '371443',
     }, 
@@ -232,7 +203,6 @@ const ArrProducts = [
         productBrand: 'Global Village',
         productCountry: 'Россия',
         productWeight: '720г',
-        boxRating: '4',
         productCategory: 'Фрукты и овощи',
         productArticl: '371444',
     },
@@ -246,7 +216,6 @@ const ArrProducts = [
         productBrand: 'Global Village',
         productCountry: 'Россия',
         productWeight: '680г',
-        boxRating: '5',
         productCategory: 'Фрукты и овощи',
         productArticl: '371445',
     },
@@ -260,7 +229,6 @@ const ArrProducts = [
         productBrand: 'Global Village',
         productCountry: 'Россия',
         productWeight: '400г',
-        boxRating: '5',
         productCategory: 'Фрукты и овощи',
         productArticl: '371446',
     }, 
@@ -274,7 +242,6 @@ const ArrProducts = [
         productBrand: 'Global Village',
         productCountry: 'Россия',
         productWeight: '700г',
-        boxRating: '5',
         productCategory: 'Фрукты и овощи',
         productArticl: '371447',
     }, 
@@ -288,7 +255,6 @@ const ArrProducts = [
         productBrand: 'Шарлиз',
         productCountry: 'Россия',
         productWeight: '137г',
-        boxRating: '5',
         productCategory: 'Кондитерские изделия',
         productArticl: '371448',
     },
@@ -302,7 +268,6 @@ const ArrProducts = [
         productBrand: 'Шарлиз',
         productCountry: 'Россия',
         productWeight: '250г',
-        boxRating: '5',
         productCategory: 'Кондитерские изделия',
         productArticl: '371449',
     },
@@ -316,7 +281,6 @@ const ArrProducts = [
         productBrand: 'Societe Minerale',
         productCountry: 'Россия',
         productWeight: '1600г',
-        boxRating: '5',
         productCategory: 'Напитки',
         productArticl: '371450',
     },
@@ -330,7 +294,6 @@ const ArrProducts = [
         productBrand: 'Societe Minerale',
         productCountry: 'Россия',
         productWeight: '1600г',
-        boxRating: '0',
         productCategory: 'Напитки',
         productArticl: '371451',
     },
@@ -344,7 +307,6 @@ const ArrProducts = [
         productBrand: 'Fish House',
         productCountry: 'Россия',
         productWeight: '200г',
-        boxRating: '5',
         productCategory: 'Мясо, птица, рыба, колбаса',
         productArticl: '371452',
     },
@@ -358,7 +320,6 @@ const ArrProducts = [
         productBrand: 'Fish House',
         productCountry: 'Россия',
         productWeight: '220г',
-        boxRating: '5',
         productCategory: 'Мясо, птица, рыба, колбаса',
         productArticl: '371453',
     },
@@ -372,7 +333,6 @@ const ArrProducts = [
         productBrand: 'Мясная Ферма',
         productCountry: 'Россия',
         productWeight: '100г',
-        boxRating: '4',
         productCategory: 'Мясо, птица, рыба, колбаса',
         productArticl: '371454',
     },

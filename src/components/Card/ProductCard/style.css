@@ -21,6 +21,7 @@
     justify-content: space-between;
     height: 32px;
     max-width: 556px;
+
 }
 
 .card__product-article {
@@ -31,6 +32,10 @@
 
 .card__box-rating {
     align-self: center;
+    align-items: center;
+    display: flex;
+    gap: 4px;
+
 }
 
 .card__rating-text {

@@ -25,6 +25,17 @@ function changesEndingsWords(count) {
     }
 }
 
+//функция меняющая окончания слова 'бонус'
+function changeEndingBonus(count) {
+    if (count % 10 === 1 && count % 100 !== 11) {
+        return 'бонус';
+    } else if ((count % 10 >= 2 && count % 10 <= 4) && (count % 100 < 12 || count % 100 > 14)) {
+        return 'бонуса';
+    } else {
+        return 'бонусов';
+    }
+}
+
 //средний бал отзыва
 function calculateAverageRating(id) {
     let sum = ArrReviews[id].review;    
@@ -45,9 +56,7 @@ function ProductCard(props) {
                     <div className="card__box-button">
                         <span className="card__product-article">арт. {idProduct.productArticl}</span>
 
-                        <div className="product__box-rating card__box-rating">
-
-
+                        <div className="card__box-rating">
                             {ArrProducts.slice(0, calculateAverageRating(idProduct.id)).map((product) => ( //вывод рейтинг продукта
                                 <span className="product__star product__star_on" key={product.id}></span>
                             ))}
@@ -55,8 +64,6 @@ function ProductCard(props) {
                             {ArrProducts.slice(0, 5 - calculateAverageRating(idProduct.id)).map((product) => ( //вывод затемнённых звёзд если у товара не 5 звёзд рейтинга
                                 <span className="product__star" key={product.id}></span>
                             ))}
-
-
 
                             <span className="card__rating-text"><a href="/">{numberReviews(idProduct.id)} {changesEndingsWords(numberReviews(idProduct.id))}</a></span>
                         </div>
@@ -107,7 +114,7 @@ function ProductCard(props) {
                         </div>
                         
                         <button className="card__button-buy" type="button">В корзину</button>
-                        <span className="card__bonus">Количество бонусов за покупку: {Math.floor(idProduct.productNoCart / 10)}</span>
+                        <span className="card__bonus">Вы получите {Math.floor(idProduct.productNoCart / 10)} {changeEndingBonus((Math.floor(idProduct.productNoCart / 10)))}</span>
                         <button className="card__button-decrease" type="button">Уведомить о снижении цены</button>
 
                         <div className="card__box-characteristics">

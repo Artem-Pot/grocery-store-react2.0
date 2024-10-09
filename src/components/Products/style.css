@@ -29,7 +29,9 @@
 }
 
 .product__box {
-
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .product__box-images {
@@ -151,10 +153,10 @@
 
 .product__box-rating {
   display: flex;
-  align-self: end;
   gap: 4px;
-  padding: 0 8px;
-  align-self: start;
+  position: absolute;
+  bottom: 56px;
+  left: 8px;
 }
 
 .product__star {

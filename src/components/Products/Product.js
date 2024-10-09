@@ -2,7 +2,14 @@
 import { NavLink } from "react-router-dom";
 import './style.css';
 import ArrProducts from '../../helpers/ArrProducts/ArrProducts';
+import ArrReviews from "../../helpers/ArrReviews/ArrReviews";
 import { ReactComponent as Favorites } from "./img/favorites.svg";
+
+//средний бал отзыва
+function calculateAverageRating(id) {
+    let sum = ArrReviews[id].review;    
+    return Math.floor (sum.reduce((sum, product) => sum + product.rating, 0) / sum.length);
+}
 
 function Product(props) {
   return (
@@ -35,13 +42,15 @@ function Product(props) {
                         </div>
 
                         <div className="product__box-rating">
-                            {ArrProducts.slice(0, product.boxRating).map((product) => ( //вывод рейтинг продукта
+                            {ArrProducts.slice(0, calculateAverageRating(product.id)).map((product) => ( //вывод рейтинг продукта
                                 <span className="product__star product__star_on" key={product.id}></span>
                             ))}
-                            {ArrProducts.slice(0, 5 - product.boxRating).map((product) => ( //вывод затемнённых звёзд если у товара не 5 звёзд рейтинга
+
+                            {ArrProducts.slice(0, 5 - calculateAverageRating(product.id)).map((product) => ( //вывод затемнённых звёзд если у товара не 5 звёзд рейтинга
                                 <span className="product__star" key={product.id}></span>
                             ))}
                         </div>
+                        
                     </div>        
                 </NavLink>
                 <button className="product__button-buy" type="button">В корзину</button>
