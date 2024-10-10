@@ -4,16 +4,16 @@ import { NavLink } from "react-router-dom";
 import Product from '../Products/Product';
 import './style.css';
 
+import Title from "../Form/Title/Title";
+
 function ProductBlock(props) {
     return (
         <section className="product-list product-list_stock">
             <div className="container">
                 <div className="product-list__wrapper">
-                    <div className="product-list__header">
-                        <h2 className="title-h2">{props.text}</h2>
-                        <NavLink className={props.hiddenTextall === 'true'? 'displayNone' : 'product-list__all'} to="product">{props.textAll}</NavLink>
-                        
-                    </div>
+
+                    <Title text={props.text} hiddenTextall={props.textAll} textAll={props.textAll}/>
+
                     <div className="product-list__box">
                         <Product startProducts={props.startProducts} quantityProducts={props.quantityProducts} hiddenProperties={props.hiddenProperties}/>
                     </div>

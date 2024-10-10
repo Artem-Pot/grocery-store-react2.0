@@ -35,7 +35,6 @@
     align-items: center;
     display: flex;
     gap: 4px;
-
 }
 
 .card__rating-text {
@@ -291,18 +290,18 @@
 }
 
 /*Блок с похожими товарами*/
+.card__box-similar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .card__similar > span{
     color: rgb(96, 96, 96);
     line-height: 150%;
     text-align: left;
     margin-bottom: 16px;
     display: block;
-}
-
-.card__box-similar {
-    display: flex;
-    flex-direction: column;
-    gap: 26px;
 }
 
 .card__similar-product {

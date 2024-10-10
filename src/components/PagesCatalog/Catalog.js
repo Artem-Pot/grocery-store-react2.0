@@ -1,6 +1,7 @@
 import ArrCategory from '../../helpers/ArrCategory/ArrCategory';
 import Navigation from '../Navigation/Navigation';
 import { NavLink } from "react-router-dom";
+import Title from '../Form/Title/Title';
 import './style.css';
 
 const Catalog = (props) => {    
@@ -12,7 +13,7 @@ const Catalog = (props) => {
 
                 <Navigation url={props.catalog}/> 
 
-                <h2 className="title-h2">Каталог</h2>
+                <Title text={'Каталог'} hiddenTextall={'true'}/>
                 <div className="catalog__box">
  
                 {ArrCategory.map((category) => (

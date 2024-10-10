@@ -1,11 +1,12 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import Title from '../../Form/Title/Title';
 import './style.css';
 
 function OurStores() {
     return (
       <section className="our-stores">
         <div className="container">
-          <h2 className="title-h2">Наши магазины</h2>
+          <Title text={'Наши магазины'} hiddenTextall='true'/>
           <Tabs>
             <TabList className="our-stores__box-button">
               <Tab className="our-stores__button">п.Щельяюр</Tab>

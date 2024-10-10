@@ -1,4 +1,4 @@
-import CatalogProduct from '../components/Catalog/Catalog';
+import CatalogProduct from '../components/PagesCatalog/Catalog';
 
 function Catalog(props){
     return (

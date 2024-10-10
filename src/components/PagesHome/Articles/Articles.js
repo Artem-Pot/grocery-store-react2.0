@@ -1,5 +1,7 @@
-import ArrArticles from './../../../helpers/ArrArticles/ArrArticles';
+//компоненты - Статьи
+import ArrArticles from '../../../helpers/ArrArticles/ArrArticles';
 import { NavLink } from "react-router-dom";
+import Title from '../../Form/Title/Title';
 import './style.css';
 
 function Articles(props) {
@@ -8,8 +10,9 @@ function Articles(props) {
             <div className="container">
                 <div className="articles__wrapper">
                     <div className="product-list__header">
-                        <h2 className="title-h2">Статьи</h2><NavLink className="product-list__all" to="/articles">Все статьи</NavLink>
+                        <Title text={'Статьи'} hiddenTextall='true'/><NavLink className="product-list__all" to="/articles">Все статьи</NavLink>
                     </div>
+                    
                     <div className="articles__box-articles">
                     {ArrArticles.slice(0, 3).map((articl) => (
                         <article className="articl" key={articl.id}>

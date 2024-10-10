@@ -48,7 +48,7 @@ function ProductCard(props) {
     
     return (
         <>
-            <div className="card__card-product">
+            <section className="card__card-product">
 
                 <div className="card__header">
                     <span className="card__name">{idProduct.productName}</span>
@@ -168,7 +168,7 @@ function ProductCard(props) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
         </>
     );

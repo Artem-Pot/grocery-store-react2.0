@@ -1,0 +1,42 @@
+.title__header {
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+.title__h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    .title__h2 {
+      font-size: 24px;
+    }
+  }
+
+  .product-list__all {
+    display: flex;
+    align-items: center;
+    width: 135px;
+    height: 24px;
+    position: relative;
+    color: inherit;
+    padding: 8px;
+  }
+  
+  .product-list__all::after {
+    content: "";
+    background: url("./img/button-right.svg");
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 15px;
+  }
+
+  .displayNone {
+    display: none;
+  }

@@ -1,10 +1,11 @@
+import Title from '../../Form/Title/Title';
 import './style.css';
 
 function SpecialOffers() {
   return (
     <section className="special-offers">
       <div className="container">
-        <h2 className="title-h2">Специальные предложения</h2>
+        <Title text={'Специальные предложения'} hiddenTextall='true'/>
         <div className="special-offers__wrapper">
           <div className="special-offers__box special-offers__box_card">
             <h3 className="special-offers__h3">Оформите карту «Северяночка»</h3>

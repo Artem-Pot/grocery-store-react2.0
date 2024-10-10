@@ -16,7 +16,7 @@ function Product(props) {
     <>
     {ArrProducts.slice(props.startProducts, props.quantityProducts).map((product) => (
 
-            <div className="product" key={product.id}>
+            <section className="product" key={product.id}>
                 <button className="product__button-favorites" type="button"><Favorites className='ico-favorites'/></button>
                 <NavLink className="product__link" to={`/card/${product.id}`}>
                     <div className="product__box">
@@ -54,7 +54,7 @@ function Product(props) {
                     </div>        
                 </NavLink>
                 <button className="product__button-buy" type="button">В корзину</button>
-            </div>
+            </section>
 
     ))}
   </>
