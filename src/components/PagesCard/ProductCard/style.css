@@ -1,4 +1,8 @@
 /* Карточка товара*/
+.card__card-product {
+    margin-bottom: 100px;
+}
+
 .card__header {
     display: flex;
     flex-direction: column;

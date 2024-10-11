@@ -15,11 +15,10 @@ function Card(){
         <main className="card">
             <div className="container">
                 <div className="card__wrapper">
-
                     <Navigation productCategory={ArrProducts[location].productCategory} productName={ArrProducts[location].productName} arrowRight={'true'}/>
                     <ProductCard idProduct={(location)}/>
-                    <ProductBlock text={'С этим товаром покупают'} textAll={'Все покупки'} startProducts={5} quantityProducts={9} hiddenProperties='false' hiddenTextall='true' />
                     <ProductReviews/>
+                    <ProductBlock text={'С этим товаром покупают'} textAll={'Все покупки'} startProducts={5} quantityProducts={9} hiddenProperties='false' hiddenTextall='true' />
                 </div>
             </div>
         </main>

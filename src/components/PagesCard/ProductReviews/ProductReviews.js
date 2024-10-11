@@ -135,11 +135,26 @@ function ProductReviews() {
 
                             <span className="reviews__text">Приятный вкус</span>
                         </article>
+
+                        <div className="reviews__your-review">
+                            <div className="reviews__box-user">
+                                <span className="reviews__text-grade">Ваша оценка</span>
+                                <div className="reviews__stars">
+                                    <span className="reviews__star"></span>
+                                    <span className="reviews__star"></span>
+                                    <span className="reviews__star"></span>
+                                    <span className="reviews__star"></span>
+                                    <span className="reviews__star"></span>
+                                </div>
+                            </div>
+
+                            <div className="reviews__input-field">
+                                <textarea className="reviews__input-text" placeholder="Напишите ваш отзыв"></textarea>
+                                <button className="reviews__btn-send" type="button">Отправить отзыв</button>
+                            </div>
+
+                        </div>
                     </div>
-
-
-
-
 
                 </div>
             </section>
