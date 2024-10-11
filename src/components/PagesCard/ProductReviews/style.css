@@ -19,6 +19,7 @@
     display: flex;
     justify-content: space-between;
     width: 166px;
+    gap: 16px;
 
 }
 
@@ -95,6 +96,7 @@
 .reviews__date {
   font-size: 12px !important;
   font-weight: 400 !important;
+  color: rgb(143, 143, 143);
 
 }
 

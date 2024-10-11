@@ -39,7 +39,7 @@ function changeEndingBonus(count) {
 //средний бал отзыва
 function calculateAverageRating(id) {
     let sum = ArrReviews[id].review;    
-    return Math.floor (sum.reduce((sum, product) => sum + product.rating, 0) / sum.length);
+    return Math.floor(sum.reduce((sum, product) => sum + product.rating, 0) / sum.length);
 }
 
 function ProductCard(props) {
@@ -57,13 +57,15 @@ function ProductCard(props) {
                         <span className="card__product-article">арт. {idProduct.productArticl}</span>
 
                         <div className="card__box-rating">
-                            {ArrProducts.slice(0, calculateAverageRating(idProduct.id)).map((product) => ( //вывод рейтинг продукта
-                                <span className="product__star product__star_on" key={product.id}></span>
+                        <div className="reviews__stars">
+                            {ArrProducts.slice(0, calculateAverageRating(props.idProduct)).map((product) => ( //вывод рейтинг продукта
+                                <span className="reviews__star reviews__star_on" key={product.id}></span>
                             ))}
 
-                            {ArrProducts.slice(0, 5 - calculateAverageRating(idProduct.id)).map((product) => ( //вывод затемнённых звёзд если у товара не 5 звёзд рейтинга
-                                <span className="product__star" key={product.id}></span>
+                            {ArrProducts.slice(0, 5 - calculateAverageRating(props.idProduct)).map((product) => ( //вывод затемнённых звёзд если у товара не 5 звёзд рейтинга
+                                <span className="reviews__star" key={product.id}></span>
                             ))}
+                        </div>
 
                             <span className="card__rating-text"><a href="/">{numberReviews(idProduct.id)} {changesEndingsWords(numberReviews(idProduct.id))}</a></span>
                         </div>

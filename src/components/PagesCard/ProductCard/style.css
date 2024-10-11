@@ -45,6 +45,13 @@
     margin-left: 8px;
 }
 
+.card__rating-text a{
+    color: rgb(65, 65, 65);
+    text-decoration: underline;
+}
+
+
+
 .card__button {
     position: relative;
     width: 132px;
