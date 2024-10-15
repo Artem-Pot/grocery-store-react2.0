@@ -19,13 +19,24 @@
     text-align: left;
 }
 
+@media (max-width: 360px) {
+    .card__name {
+        font-size: 20px;
+    }
+}
+
 .card__box-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 32px;
     max-width: 556px;
+}
 
+@media (max-width: 360px) {
+    .card__box-button {
+        max-width: 100%;
+    }
 }
 
 .card__product-article {
@@ -49,8 +60,6 @@
     color: rgb(65, 65, 65);
     text-decoration: underline;
 }
-
-
 
 .card__button {
     position: relative;
@@ -85,8 +94,22 @@
 }
 
 .card__box {
-    display: flex;
+    display: flex; 
     justify-content: space-between;
+    gap: 40px;   
+}
+
+@media (max-width: 768px) {
+    .card__box  {
+        flex-direction: column;
+    }
+}
+
+.card__body {
+    display: flex;
+    justify-content: space-between; 
+    gap: 40px;
+    width: 100%;
 }
 
 /* Блок изображений карточки*/
@@ -103,14 +126,27 @@
     height: 496px;
 }
 
+@media (max-width: 768px) {
+    .card__box-small  {
+        height: 248px;
+    }
+}
+
 .card__small {
     width: 64px;
     height: 86px;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
+
+@media (max-width: 768px) {
+    .card__small  {
+        width: 64px;
+        height: 37px;
+    }
+}
+
 
 .card__small:hover {
     cursor: pointer;
@@ -125,6 +161,14 @@
     object-fit: contain;
 }
 
+@media (max-width: 768px) {
+    .card__images_small   {
+        width: 64px;
+        height: 37px;
+        
+    }
+}
+
 .card__big {
     display: flex;
     align-items: center;
@@ -135,11 +179,25 @@
     background-color: #fff;
 }
 
+@media (max-width: 768px) {
+    .card__big  {
+        width: 272px;
+        height: 248px;
+    }
+}
+
 .card__images_big {
     max-width: 504px;
     max-height: 496px;
     background-color: chocolate;
     background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .card__images_big  {
+        max-width: 248px;
+        height: 248px;
+    }
 }
 
 .card__sales {
@@ -150,6 +208,22 @@
     top: 20px;
     right: 20px;
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .card__sales  {
+        width: 56px;
+        height: 32px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    .card__sales  {
+        width: 46px;
+        height: 24px;
+        font-size: 12px;
+    }
 }
 
 /*Блок информации карточки*/
@@ -183,6 +257,12 @@
     line-height: 150%;
 }
 
+@media (max-width: 768px) {
+    .card___price-nocart   {
+        font-size: 18px;
+    }
+}
+
 .card___title {
     color: rgb(191, 191, 191);
     font-size: 12px;
@@ -194,6 +274,13 @@
     font-size: 36px;
     font-weight: 700;
     line-height: 150%;
+}
+
+
+@media (max-width: 768px) {
+    .card___price-nocart   {
+        font-size: 24px;
+    }
 }
 
 .card__button-buy {
@@ -306,6 +393,13 @@
     flex-direction: column;
     gap: 16px;
 }
+
+@media (max-width: 768px) {
+    .card__box-similar   {
+        flex-direction:row;
+    }
+}
+
 
 .card__similar > span{
     color: rgb(96, 96, 96);

@@ -49,125 +49,128 @@ function ProductCard(props) {
     return (
         <>
             <section className="card__card-product">
+                <div className="container">
+                    <div className="card__header">
+                        <span className="card__name">{idProduct.productName}</span>
 
-                <div className="card__header">
-                    <span className="card__name">{idProduct.productName}</span>
+                        <div className="card__box-button">
+                            <span className="card__product-article">арт. {idProduct.productArticl}</span>
 
-                    <div className="card__box-button">
-                        <span className="card__product-article">арт. {idProduct.productArticl}</span>
+                            <div className="card__box-rating">
+                            <div className="reviews__stars">
+                                {ArrProducts.slice(0, calculateAverageRating(props.idProduct)).map((product) => ( //вывод рейтинг продукта
+                                    <span className="reviews__star reviews__star_on" key={product.id}></span>
+                                ))}
 
-                        <div className="card__box-rating">
-                        <div className="reviews__stars">
-                            {ArrProducts.slice(0, calculateAverageRating(props.idProduct)).map((product) => ( //вывод рейтинг продукта
-                                <span className="reviews__star reviews__star_on" key={product.id}></span>
-                            ))}
-
-                            {ArrProducts.slice(0, 5 - calculateAverageRating(props.idProduct)).map((product) => ( //вывод затемнённых звёзд если у товара не 5 звёзд рейтинга
-                                <span className="reviews__star" key={product.id}></span>
-                            ))}
-                        </div>
-
-                            <span className="card__rating-text"><a href="/">{numberReviews(idProduct.id)} {changesEndingsWords(numberReviews(idProduct.id))}</a></span>
-                        </div>
-                    
-                        <button className="card__button card__button-share" type="button">Поделиться</button>
-                        <button className="card__button card__button-favorites" type="button">В избранное</button>
-                    </div>
-                </div>
-                            
-                <div className="card__box">
-
-                    <div className="card__box-images">
-                        <div className="card__box-small">
-                            <div className="card__small">
-                                <img src={idProduct.imgProduct} className="card__images card__images_small" alt="Изображение продукта"/>
+                                {ArrProducts.slice(0, 5 - calculateAverageRating(props.idProduct)).map((product) => ( //вывод затемнённых звёзд если у товара не 5 звёзд рейтинга
+                                    <span className="reviews__star" key={product.id}></span>
+                                ))}
                             </div>
-                            <div className="card__small">
-                                <img src={idProduct.imgProduct} className="card__images card__images_small" alt="Изображение продукта"/>
-                            </div>
-                            <div className="card__small">
-                                <img src={idProduct.imgProduct} className="card__images card__images_small" alt="Изображение продукта"/>
-                            </div>
-                            <div className="card__small">
-                                <img src={idProduct.imgProduct} className="card__images card__images_small" alt="Изображение продукта"/>
-                            </div>
-                            <div className="card__small">
-                                <img src={idProduct.imgProduct} className="card__images card__images_small" alt="Изображение продукта"/>
-                            </div>
-                        </div>
 
-                        <div className="card__big">
-                            <img src={idProduct.imgProduct} className="card__images card__images_big" alt="Изображение продукта" />
-                            <span className="card__sales">{idProduct.productSales}</span>
+                                <span className="card__rating-text"><a href="/">{numberReviews(idProduct.id)} {changesEndingsWords(numberReviews(idProduct.id))}</a></span>
+                            </div>
+                        
+                            <button className="card__button card__button-share" type="button">Поделиться</button>
+                            <button className="card__button card__button-favorites" type="button">В избранное</button>
                         </div>
                     </div>
+                                
+                    <div className="card__box">
+                        <div className="card__body">
+                            <div className="card__box-images">
+                                <div className="card__box-small">
+                                    <div className="card__small">
+                                        <img src={idProduct.imgProduct} className="card__images_small" alt="Изображение продукта"/>
+                                    </div>
+                                    <div className="card__small">
+                                        <img src={idProduct.imgProduct} className="card__images_small" alt="Изображение продукта"/>
+                                    </div>
+                                    <div className="card__small">
+                                        <img src={idProduct.imgProduct} className="card__images_small" alt="Изображение продукта"/>
+                                    </div>
+                                    <div className="card__small">
+                                        <img src={idProduct.imgProduct} className="card__images_small" alt="Изображение продукта"/>
+                                    </div>
+                                    <div className="card__small">
+                                        <img src={idProduct.imgProduct} className="card__images_small" alt="Изображение продукта"/>
+                                    </div>
+                                </div>
 
-                    <div className="card__box-information">
-                        <div className="card___box-price">
-                            <div className="card___price">
-                                <span className="card___price-nocart">{idProduct.productNoCart} ₽</span>
-                                <span className="card___title">Обычная</span>
+                                <div className="card__big">
+                                    <img src={idProduct.imgProduct} className="card__images_big" alt="Изображение продукта" />
+                                    <span className="card__sales">{idProduct.productSales}</span>
+                                </div>
                             </div>
 
-                            <div className="card___price">
-                                <span className="card___price-cart">{idProduct.productPriceCart} ₽</span>
-                                <span className="card___title">С картой Северяночки</span>
+                            <div className="card__box-information">
+                                <div className="card___box-price">
+                                    <div className="card___price">
+                                        <span className="card___price-nocart">{idProduct.productNoCart} ₽</span>
+                                        <span className="card___title">Обычная</span>
+                                    </div>
+
+                                    <div className="card___price">
+                                        <span className="card___price-cart">{idProduct.productPriceCart} ₽</span>
+                                        <span className="card___title">С картой Северяночки</span>
+                                    </div>
+                                </div>
+                                
+                                <button className="card__button-buy" type="button">В корзину</button>
+                                <span className="card__bonus">Вы получите {Math.floor(idProduct.productNoCart / 10)} {changeEndingBonus((Math.floor(idProduct.productNoCart / 10)))}</span>
+                                <button className="card__button-decrease" type="button">Уведомить о снижении цены</button>
+
+                                <div className="card__box-characteristics">
+                                    <div className="card__characteristics">
+                                        <span className="card__characteristics-left">Бренд</span>
+                                        <span className="card__characteristics-right">{idProduct.productBrand}</span>
+                                    </div>
+                                    <div className="card__characteristics">
+                                        <span className="card__characteristics-left">Страна производителя</span>
+                                        <span className="card__characteristics-right">{idProduct.productCountry}</span>
+                                    </div>
+                                    <div className="card__characteristics">
+                                        <span className="card__characteristics-left">Упаковка</span>
+                                        <span className="card__characteristics-right">{idProduct.productWeight}</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
-                        <button className="card__button-buy" type="button">В корзину</button>
-                        <span className="card__bonus">Вы получите {Math.floor(idProduct.productNoCart / 10)} {changeEndingBonus((Math.floor(idProduct.productNoCart / 10)))}</span>
-                        <button className="card__button-decrease" type="button">Уведомить о снижении цены</button>
+                        <div className="card__similar">
+                            <span>Похожие</span>
+                            <div className="card__box-similar">
 
-                        <div className="card__box-characteristics">
-                            <div className="card__characteristics">
-                                <span className="card__characteristics-left">Бренд</span>
-                                <span className="card__characteristics-right">{idProduct.productBrand}</span>
-                            </div>
-                            <div className="card__characteristics">
-                                <span className="card__characteristics-left">Страна производителя</span>
-                                <span className="card__characteristics-right">{idProduct.productCountry}</span>
-                            </div>
-                            <div className="card__characteristics">
-                                <span className="card__characteristics-left">Упаковка</span>
-                                <span className="card__characteristics-right">{idProduct.productWeight}</span>
+                                <a href="/">
+                                    <div className="card__similar-product">
+                                        <img src={imgProduct} className="card__images card__images_small" alt="Изображение продукта" />
+                                        <span>250 ₽</span>
+                                    </div>
+                                </a>
+                                
+                                <a href="/">
+                                    <div className="card__similar-product">
+                                        <img src={imgProduct2} className="card__images card__images_small" alt="Изображение продукта" />
+                                        <span>250 ₽</span>
+                                    </div>
+                                </a>
+
+                                <a href="/">
+                                    <div className="card__similar-product">
+                                        <img src={imgProduct3} className="card__images card__images_small" alt="Изображение продукта" />
+                                        <span>250 ₽</span>
+                                    </div>
+                                </a>
+
+                                <a href="/">
+                                    <div className="card__similar-product">
+                                        <img src={imgProduct4} className="card__images card__images_small" alt="Изображение продукта" />
+                                        <span>250 ₽</span>
+                                    </div>
+                                </a>
+
                             </div>
                         </div>
-                    </div>
-
-                    <div className="card__similar">
-                        <span>Похожие</span>
-                        <div className="card__box-similar">
-
-                            <a href="/">
-                                <div className="card__similar-product">
-                                    <img src={imgProduct} className="card__images card__images_small" alt="Изображение продукта" />
-                                    <span>250 ₽</span>
-                                </div>
-                            </a>
-                            
-                            <a href="/">
-                                <div className="card__similar-product">
-                                    <img src={imgProduct2} className="card__images card__images_small" alt="Изображение продукта" />
-                                    <span>250 ₽</span>
-                                </div>
-                            </a>
-
-                            <a href="/">
-                                <div className="card__similar-product">
-                                    <img src={imgProduct3} className="card__images card__images_small" alt="Изображение продукта" />
-                                    <span>250 ₽</span>
-                                </div>
-                            </a>
-
-                            <a href="/">
-                                <div className="card__similar-product">
-                                    <img src={imgProduct4} className="card__images card__images_small" alt="Изображение продукта" />
-                                    <span>250 ₽</span>
-                                </div>
-                            </a>
-
-                        </div>
+                        
                     </div>
                 </div>
             </section>

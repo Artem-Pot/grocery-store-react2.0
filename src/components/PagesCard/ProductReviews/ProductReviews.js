@@ -129,7 +129,7 @@ function ProductReviews(props) {
 
                                     </div>
     
-                                    <span className="reviews__date">22.02.2020</span>
+                                    <span className="reviews__date">{product.date}</span>
                                 </div>
 
                                 <span className="reviews__text">{product.text}</span>
