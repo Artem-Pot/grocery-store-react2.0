@@ -27,9 +27,6 @@ function ProductReviews(props) {
         return sum;
     }
 
-    console.log(idReview[1].rating);
-    
-
     return (
         <>
             <section className="reviews">

@@ -140,33 +140,37 @@ function ProductCard(props) {
                             <span>Похожие</span>
                             <div className="card__box-similar">
 
-                                <a href="/">
-                                    <div className="card__similar-product">
-                                        <img src={imgProduct} className="card__images card__images_small" alt="Изображение продукта" />
-                                        <span>250 ₽</span>
-                                    </div>
-                                </a>
                                 
-                                <a href="/">
                                     <div className="card__similar-product">
-                                        <img src={imgProduct2} className="card__images card__images_small" alt="Изображение продукта" />
-                                        <span>250 ₽</span>
+                                        <a href="/">
+                                            <img src={imgProduct} className="card__images card__images_small" alt="Изображение продукта" />
+                                            <span>250 ₽</span>
+                                        </a>
                                     </div>
-                                </a>
+                                
+                                    <div className="card__similar-product">
+                                        <a href="/">
+                                            <img src={imgProduct2} className="card__images card__images_small" alt="Изображение продукта" />
+                                            <span>250 ₽</span>
+                                        </a>
+                                    </div>
+                                
+                                    <div className="card__similar-product">
+                                        <a href="/">
+                                            <img src={imgProduct3} className="card__images card__images_small" alt="Изображение продукта" />
+                                            <span>250 ₽</span>
+                                        </a>
+                                    </div>
 
-                                <a href="/">
-                                    <div className="card__similar-product">
-                                        <img src={imgProduct3} className="card__images card__images_small" alt="Изображение продукта" />
-                                        <span>250 ₽</span>
-                                    </div>
-                                </a>
 
-                                <a href="/">
+                                
                                     <div className="card__similar-product">
-                                        <img src={imgProduct4} className="card__images card__images_small" alt="Изображение продукта" />
-                                        <span>250 ₽</span>
+                                        <a href="/">
+                                            <img src={imgProduct4} className="card__images card__images_small" alt="Изображение продукта" />
+                                            <span>250 ₽</span>
+                                        </a>
                                     </div>
-                                </a>
+                                
 
                             </div>
                         </div>
