@@ -1,0 +1,124 @@
+.catalog-product {
+
+}
+
+.catalog-product__wrapper {
+
+}
+
+.catalog-product__header {
+
+}
+
+.catalog-product__header-link {
+
+}
+
+/* фильтр*/
+.filter {
+    display: flex;
+    flex-direction: column;
+    line-height: 150%;
+    width: 272px;
+}
+
+.filter__title {
+    color: rgb(65, 65, 65);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    border-radius: 4px;
+    background-color: rgb(243, 242, 241);
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+.filter__box-price {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 13px;
+
+}
+
+.filter__label {
+    font-size: 16px;
+    text-align: left;
+}
+
+.filter__btn-clear {
+    width: 85px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: rgb(243, 242, 241);
+    color: rgb(96, 96, 96);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.filter__btn-clear:hover {
+    background-color: rgb(226, 223, 220);
+}
+
+.filter__box-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.filter__input {
+    width: 124px;
+    height: 40px;
+    border: 1px solid rgb(191, 191, 191);
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    padding: 8px 16px 8px 16px;
+    color: rgb(65, 65, 65);
+    font-family: 'Cera Round Pro';
+    font-size: 16px;
+    line-height: 28px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.filter__range {
+
+}
+
+.filter__category-list {
+
+}
+
+.filter__category-item {
+
+}
+
+.filter__switch {
+
+}
+
+.filter__switch span{
+
+}
+
+.filter__checkbox {
+
+}

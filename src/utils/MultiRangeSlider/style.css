@@ -1,0 +1,118 @@
+  .slider {
+    position: relative;
+    width: 270px;
+    margin-bottom: 50px;
+  }
+  
+  .slider__track,
+  .slider__range {
+    position: absolute;
+  }
+  
+  .slider__track,
+  .slider__range {
+    border-radius: 3px;
+    height: 5px;
+  }
+  
+  .slider__track {
+    background-color: #d3e4cf;
+    width: 100%;
+    z-index: 1;
+    bottom: -24px;
+  }
+  
+  .slider__range {
+    background-color: #70C05B;
+    z-index: 2;
+    bottom: -24px;
+  }
+  
+.filter__box-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #FBF8EC;
+}
+
+  .slider__left-value,
+  .slider__right-value {
+    width: 124px;
+    height: 40px;
+    border: 1px solid rgb(191, 191, 191);
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    padding: 8px 16px 8px 16px;
+    color: rgb(65, 65, 65);
+    font-family: 'Cera Round Pro';
+    font-size: 16px;
+    line-height: 28px;
+    text-align: left;
+  }
+  
+  .slider__left-value {
+    left: 0px;
+  }
+  
+  .slider__right-value {
+    right: -20px;
+  }
+  
+  /* Removing the default appearance */
+  .thumb,
+  .thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .thumb {
+    pointer-events: none;
+    position: absolute;
+    height: 0;
+    width: 270px;
+    outline: none;
+  }
+  
+  .thumb--zindex-3 {
+    z-index: 3;
+  }
+  
+  .thumb--zindex-4 {
+    z-index: 4;
+  }
+  
+  .thumb--zindex-5 {
+    z-index: 5;
+  }
+  
+  /* For Chrome browsers */
+  .thumb::-webkit-slider-thumb {
+    background-color: #70C05B;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 2px 4px 8px 0px rgba(112, 192, 91, 0.2);
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
+    bottom: -60px;
+  }
+  
+  /* For Firefox browsers */
+  .thumb::-moz-range-thumb {
+    background-color: #f1f5f7;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px #ced4da;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
+    
+  }
+  

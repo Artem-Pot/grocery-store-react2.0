@@ -6,7 +6,8 @@ import './index.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
-import Catalog from './pages/Catalog';
+import CatalogCategory from './components/PagesCatalogCategory/CatalogCategory';
+import CatalogProduct from './pages/CatalogProduct';
 import Card from './pages/Card';
 // import ProductCard from './components/Card/ProductCard/ProductCard';
 
@@ -22,9 +23,9 @@ root.render(
         
         <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="catalog" element={<Catalog /> }></Route>
+            <Route path="catalog" element={<CatalogCategory /> }></Route>
+            <Route path="/catalog-product"  element={<CatalogProduct /> }></Route>
             <Route path="/card/:id"  element={<Card /> }></Route>
-
         </Routes>
 
         <Footer />
