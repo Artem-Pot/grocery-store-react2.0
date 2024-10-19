@@ -1,34 +1,41 @@
 import './style.css';
+import { useLocation } from "react-router-dom";
 import Navigation from '../Navigation/Navigation';
 import { NavLink } from "react-router-dom";
 import Title from '../Form/Title/Title';
 import Product from '../Products/Product';
+import ArrCategory from '../../helpers/ArrCategory/ArrCategory';
 //ползунок
 import MultiRangeSlider from '../../utils/MultiRangeSlider/MultiRangeSlider';
 //переключатель чек бокс
 import React, { useState } from "react";
 import ReactSwitch from "react-switch";
 
-
-
-
-
-
-
-
+//состояния переключателя
 const CatalogProduct = (props) => {   
     const [checked, setChecked] = useState(false);
     const handleChange = (nextChecked) => {
       setChecked(nextChecked);
     };
+
+    const location = (useLocation().pathname.slice(9)); //получение обозначения категории через URL
     
+    const searchCategoryId = function (location) {
+        const foundItem = ArrCategory.find((item) => item.urlCategory === location);
+        if (foundItem) {
+            return foundItem.id; // Возвращаем id найденного элемента
+        }
+        return null; // Возвращаем null если элемент не найден
+    };
+    
+    const searcId = searchCategoryId(location); //найденный id
 
     return (
         <>
         <section className="catalog-product">
             <div className="container">
                 <Navigation url={props.catalog}/> 
-                <Title text={'Молоко, сыр, яйцо'} hiddenTextall={'true'}/>
+                <Title text={ArrCategory[searcId - 1].textCategory} hiddenTextall={'true'}/>
                 <div className="catalog-product__wrapper">
                     <div className="catalog-product__header">
                         <a hreа="/" className="catalog-product__header-link"><span>Товары нашего производства</span></a>
@@ -58,15 +65,10 @@ const CatalogProduct = (props) => {
                             checked={checked}
                             onChange={handleChange}
                             onColor="#70C05B"
-                            onHandleColor="fff"
-                            offHandleColor="#fff"
                             handleDiameter={20}
                             uncheckedIcon={false}
                             checkedIcon={false}
                             fontSize= {20}
-                            display="flex"
-                            justifyContent="center"
-                            alignItems="center"
                             height={24}
                             width={44}
                             className="filter__checkbox"
@@ -97,6 +99,4 @@ const CatalogProduct = (props) => {
 };
  
 export default CatalogProduct;
-
-//вынести фильтр в отдельный компонент
  

@@ -130,6 +130,8 @@
 
 .product__price-nocart {
   font-size: 16px;
+  align-self: end;
+
 }
 
 @media (max-width: 506px) {

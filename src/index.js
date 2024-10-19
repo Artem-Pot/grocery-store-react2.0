@@ -24,7 +24,7 @@ root.render(
         <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="catalog" element={<CatalogCategory /> }></Route>
-            <Route path="/catalog-product"  element={<CatalogProduct /> }></Route>
+            <Route path="/catalog/:id"  element={<CatalogProduct /> }></Route>
             <Route path="/card/:id"  element={<Card /> }></Route>
         </Routes>
 

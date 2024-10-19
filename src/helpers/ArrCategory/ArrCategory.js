@@ -47,7 +47,7 @@ let ArrCategory = [
         id: 6,
         imgCategory: imgCategory6,
         textCategory:'Кондитерские изделия',
-        urlCategory: 'сonfectionery',
+        urlCategory: 'confectionery',
     },
     {
         id: 7,
