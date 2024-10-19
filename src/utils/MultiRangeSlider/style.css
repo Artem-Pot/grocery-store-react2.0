@@ -1,28 +1,28 @@
-  .slider {
+  .slider-range {
     position: relative;
     width: 270px;
     margin-bottom: 50px;
   }
   
-  .slider__track,
-  .slider__range {
+  .slider-range__track,
+  .slider-range__range {
     position: absolute;
   }
   
-  .slider__track,
-  .slider__range {
+  .slider-range__track,
+  .slider-range__range {
     border-radius: 3px;
     height: 5px;
   }
   
-  .slider__track {
+  .slider-range__track {
     background-color: #d3e4cf;
     width: 100%;
     z-index: 1;
     bottom: -24px;
   }
   
-  .slider__range {
+  .slider-range __range {
     background-color: #70C05B;
     z-index: 2;
     bottom: -24px;
@@ -36,8 +36,8 @@
   background-color: #FBF8EC;
 }
 
-  .slider__left-value,
-  .slider__right-value {
+  .slider-range__left-value,
+  .slider-range__right-value {
     width: 124px;
     height: 40px;
     border: 1px solid rgb(191, 191, 191);
@@ -51,11 +51,11 @@
     text-align: left;
   }
   
-  .slider__left-value {
+  .slider-range__left-value {
     left: 0px;
   }
   
-  .slider__right-value {
+  .slider-range__right-value {
     right: -20px;
   }
   

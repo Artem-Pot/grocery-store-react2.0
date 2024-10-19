@@ -3,16 +3,37 @@
 }
 
 .catalog-product__wrapper {
-
+    /* display: flex;
+    flex-direction: column;
+    gap: 40px; */
+    display: grid;
+    grid-auto-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 24px auto;
+    gap: 40px; 
 }
 
 .catalog-product__header {
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    width: 100%;
+    height: auto;
+    grid-column: span 4;
 }
 
-.catalog-product__header-link {
-
+.catalog-product__header-link span{
+    height: 24px;
+    padding: 8px 16px;
+    color: #606060;
+    border-radius: 4px;
+    background: rgb(243, 242, 241);
 }
+
+.catalog-product__header-link span:hover {
+    cursor: pointer;
+    background-color: rgb(226, 223, 220);
+}
+
 
 /* фильтр*/
 .filter {
@@ -20,6 +41,9 @@
     flex-direction: column;
     line-height: 150%;
     width: 272px;
+    gap: 40px; 
+    grid-column: span 1;
+    grid-row: span 2;
 }
 
 .filter__title {
@@ -29,7 +53,6 @@
     text-align: left;
     border-radius: 4px;
     background-color: rgb(243, 242, 241);
-    margin-bottom: 40px;
     padding: 10px;
 }
 
@@ -38,7 +61,6 @@
     flex-direction: column;
     align-items: start;
     gap: 13px;
-
 }
 
 .filter__label {
@@ -60,65 +82,101 @@
     background-color: rgb(226, 223, 220);
 }
 
-.filter__box-input {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.filter__input {
-    width: 124px;
-    height: 40px;
-    border: 1px solid rgb(191, 191, 191);
-    border-radius: 4px;
-    background-color: rgb(255, 255, 255);
-    padding: 8px 16px 8px 16px;
-    color: rgb(65, 65, 65);
-    font-family: 'Cera Round Pro';
-    font-size: 16px;
-    line-height: 28px;
-    text-align: left;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.filter__range {
-
-}
-
+/* ---------*/
 .filter__category-list {
-
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .filter__category-item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    height: 44px;
+    padding-left: 10px;
+}
 
+.filter__category-item:hover {
+    cursor: pointer;
+    background-color: rgb(240, 187, 142);
 }
 
 .filter__switch {
-
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .filter__switch span{
-
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .filter__checkbox {
-
+    
 }
+
+.filter__btn-apply {
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: rgb(255, 102, 51);
+    font-size: 16px;
+    color: #fff;
+}
+
+.filter__btn-apply:hover {
+    background-color: rgb(247, 87, 33);
+}
+
+/*---------*/
+.filter__applied-title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    width: 100%;
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+.filter__btn-applied {
+    color: #fff;
+    background-color: #70C05B;
+    padding: 8px 40px 8px 16px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.filter__btn-applied::after {
+   content: '';
+   background: url(./clear-white.svg) no-repeat;
+   width: 24px;
+   height: 24px;
+   position: absolute;
+   top: 3px;
+   right: 8px;
+}
+
+.filter__btn-applied_clear {
+    color: #606060;
+    background-color: #F3F2F1;
+}
+
+.filter__btn-applied_clear::after {
+    background: url(./clear-black.svg) no-repeat;
+ }
+
+.filter__box-product {
+    width: 100%;
+    height: auto;
+    grid-column: span 3;
+    grid-row: span 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 40px;
+}
+

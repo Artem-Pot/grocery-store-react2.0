@@ -1,6 +1,4 @@
 //блок с товарами акции, вы покупали и т.д.
-import { NavLink } from "react-router-dom";
-
 import Product from '../Products/Product';
 import './style.css';
 

@@ -63,13 +63,13 @@ const MultiRangeSlider = ({ min, max, onChange }) => {
         className="thumb thumb--zindex-4"
       />
 
-      <div className="slider">
+      <div className="slider-range">
       <div className="filter__box-input">
-        <input type="number" className="slider__left-value"  placeholder='0' value={minVal}/> -
-        <input type="number" className="slider__right-value"  placeholder='100' value={maxVal}/>
+        <input type="number" className="slider-range__left-value"  placeholder='0' value={minVal}/> -
+        <input type="number" className="slider-range__right-value"  placeholder='100' value={maxVal}/>
       </div>
-        <div className="slider__track" />
-        <div ref={range} className="slider__range" />
+        <div className="slider-range__track" />
+        <div ref={range} className="slider-range__range" />
       </div>
 
     </div>
@@ -83,11 +83,3 @@ MultiRangeSlider.propTypes = {
 };
 
 export default MultiRangeSlider;
-
-
-// <div className="slider">
-// <div className="slider__track" />
-// <div ref={range} className="slider__range" />
-// <div className="slider__left-value">{minVal}</div>
-// <div className="slider__right-value">{maxVal}</div>
-// </div>
