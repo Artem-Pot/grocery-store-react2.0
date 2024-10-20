@@ -15,7 +15,7 @@ function Card(){
         <main className="card">
             <div className="container">
                 <div className="card__wrapper">
-                    <Navigation productCategory={ArrProducts[location].productCategory} productName={ArrProducts[location].productName} arrowRight={'true'}/>
+                    <Navigation />
                     <ProductCard idProduct={(location)}/>
                     <ProductReviews idProduct={(location)}/>
                     <ProductBlock text={'С этим товаром покупают'} textAll={'Все покупки'} startProducts={5} quantityProducts={9} hiddenProperties='false' hiddenTextall='true' />

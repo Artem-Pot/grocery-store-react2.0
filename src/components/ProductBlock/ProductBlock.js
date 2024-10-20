@@ -1,6 +1,5 @@
 //блок с товарами акции, вы покупали и т.д.
 import Product from '../Products/Product';
-import Product2 from '../Products/Product2';
 import ArrProducts from '../../helpers/ArrProducts/ArrProducts';
 import Title from "../Form/Title/Title";
 import './style.css';
@@ -30,10 +29,10 @@ function ProductBlock(props) {
                     <Title text={props.text} hiddenTextall={props.textAll} textAll={props.textAll}/>
 
                     <div className="product-list__box">
-                        <Product2 idProduct={getRandomInteger()} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
-                        <Product2 idProduct={getRandomInteger()} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
-                        <Product2 idProduct={getRandomInteger()} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
-                        <Product2 idProduct={getRandomInteger()} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
+                        <Product idProduct={getRandomInteger()} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
+                        <Product idProduct={getRandomInteger()} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
+                        <Product idProduct={getRandomInteger()} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
+                        <Product idProduct={getRandomInteger()} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
                     </div>
                 </div>
             </div>

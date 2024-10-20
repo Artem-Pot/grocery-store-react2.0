@@ -4,7 +4,6 @@ import Navigation from '../Navigation/Navigation';
 import { NavLink } from "react-router-dom";
 import Title from '../Form/Title/Title';
 import Product from '../Products/Product';
-import Product2 from '../Products/Product2';
 import ArrCategory from '../../helpers/ArrCategory/ArrCategory';
 import ArrProducts from '../../helpers/ArrProducts/ArrProducts';
 //ползунок
@@ -13,8 +12,8 @@ import MultiRangeSlider from '../../utils/MultiRangeSlider/MultiRangeSlider';
 import React, { useState } from "react";
 import ReactSwitch from "react-switch";
 
+const CatalogProduct = (props) => { 
 
-const CatalogProduct = (props) => {  
     //хуки для чекбокса
     const [checked, setChecked] = useState(false);
     const handleChange = (nextChecked) => {
@@ -22,7 +21,6 @@ const CatalogProduct = (props) => {
     };
 
     const location = (useLocation().pathname.slice(9)); //получение обозначения категории через URL
-
 
     const searchCategoryId = function (location) {
         const foundItem = ArrCategory.find((item) => item.urlCategory === location);
@@ -33,6 +31,14 @@ const CatalogProduct = (props) => {
     };
     
     const searcId = searchCategoryId(location); //найденный id категории
+
+    //хуки кнопки показать ещё
+    const [visibleCount, setVisibleCount] = useState(6); // Количество отображаемых продуктов
+    const handleShowMore = () => {
+        setVisibleCount(prevCount => prevCount + 3); // Увеличиваем на 3 по клику на "Показать ещё"
+    };
+    const availableProducts = ArrProducts.filter(product => product.productCategoryId === searcId); // Фильтруем доступные продукты
+    const visibleProducts = availableProducts.slice(0, visibleCount); // Ограничиваем количество видимых доступных продуктов
     
     return (
         <>
@@ -92,12 +98,14 @@ const CatalogProduct = (props) => {
                     </div>
 
                     <div className="filter__box-product">
-                        {ArrProducts.map((product) => (
-                            product.productCategoryId === searcId
-                            ? <Product2 idProduct={product.id} hiddenProperties={'false'} key={product.id} 
-                            /> 
-                            : null 
-                        ))}
+                                                                                  
+                            {visibleProducts.map((product) => (
+                                <Product idProduct={product.id} hiddenProperties={'false'} key={product.id} /> 
+                            ))}
+                            
+                            {visibleCount < availableProducts.length && ( // Показываем кнопку, если есть еще доступные продукты
+                                <button onClick={handleShowMore}>Показать ещё</button>
+                            )}
                     </div>
 
                 </div>
@@ -109,19 +117,3 @@ const CatalogProduct = (props) => {
 };
  
 export default CatalogProduct;
-
-
-                    // <div className="filter__box-product">
-                    //     <Product2 idProduct={2}  hiddenProperties={'false'} />
-                    //     <Product2 idProduct={searcId}  hiddenProperties={'false'} />
-                    // </div> <span >{product.id}</span>
-
-
-                    // <div className="filter__box-product">
-                    // {ArrProducts.map((product) => (
-                    //     product.productCategoryId === 4
-                    //     ? <Product2 idProduct={product.id} hiddenProperties={'false'} key={product.id} 
-                    //     /> 
-                        
-                    //     : null 
-                    // ))}
