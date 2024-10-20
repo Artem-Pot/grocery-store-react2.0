@@ -10,7 +10,7 @@ function Navigation(props) {
             <ArrowRight />
             {props.arrowRight 
                 ? <NavLink to={'/category/1'} className="navigation__link"><span>{props.productCategory}</span></NavLink> 
-                : <span>{props.url}</span>
+                : <NavLink to={'/catalog'} className="navigation__link"><span>Каталог</span></NavLink>
             }
         </nav>
     );

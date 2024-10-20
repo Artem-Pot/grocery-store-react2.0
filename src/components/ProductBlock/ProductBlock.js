@@ -1,8 +1,25 @@
 //блок с товарами акции, вы покупали и т.д.
 import Product from '../Products/Product';
+import Product2 from '../Products/Product2';
+import ArrProducts from '../../helpers/ArrProducts/ArrProducts';
+import Title from "../Form/Title/Title";
 import './style.css';
 
-import Title from "../Form/Title/Title";
+
+//функция вывода случайного продукта c проверкой дублирования
+function getRandomInteger() {
+    const ArrRandom = [];
+    let min = 1; 
+    let max = ArrProducts.length; // Округление вниз
+    let randomId;
+
+    do {
+        randomId = Math.floor(Math.random() * (max - min + 1)) + min; // Генерация случайного ID
+    } while (ArrRandom.includes(randomId)); // Проверка на дублирование
+
+    ArrRandom.push(randomId); // Сохраняем уникальный ID
+    return randomId; // Возвращаем уникальный ID
+}
 
 function ProductBlock(props) {
     return (
@@ -13,7 +30,10 @@ function ProductBlock(props) {
                     <Title text={props.text} hiddenTextall={props.textAll} textAll={props.textAll}/>
 
                     <div className="product-list__box">
-                        <Product startProducts={props.startProducts} quantityProducts={props.quantityProducts} hiddenProperties={props.hiddenProperties}/>
+                        <Product2 idProduct={getRandomInteger()} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
+                        <Product2 idProduct={getRandomInteger()} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
+                        <Product2 idProduct={getRandomInteger()} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
+                        <Product2 idProduct={getRandomInteger()} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
                     </div>
                 </div>
             </div>
@@ -22,7 +42,3 @@ function ProductBlock(props) {
     }
 
 export default ProductBlock;
-
-
-
-

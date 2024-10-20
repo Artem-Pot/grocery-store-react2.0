@@ -38,7 +38,7 @@ const CatalogProduct = (props) => {
         <>
         <section className="catalog-product">
             <div className="container">
-                <Navigation url={props.catalog}/> 
+                <Navigation url={'Каталог'}/> 
                 <Title text={ArrCategory[searcId - 1].textCategory} hiddenTextall={'true'}/>
                 <div className="catalog-product__wrapper">
                     <div className="catalog-product__header">
@@ -96,7 +96,6 @@ const CatalogProduct = (props) => {
                             product.productCategoryId === searcId
                             ? <Product2 idProduct={product.id} hiddenProperties={'false'} key={product.id} 
                             /> 
-                            
                             : null 
                         ))}
                     </div>
