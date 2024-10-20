@@ -34,7 +34,7 @@ const ArrProducts = [
         productBrand: 'РОГАЧЕВ',
         productCountry: 'Россия',
         productWeight: '200г',
-        productCategory: 'Замороженные продукты',
+        productCategoryId: 4,
         productArticl: '371431',
     },
     {
@@ -47,7 +47,7 @@ const ArrProducts = [
         productBrand: 'Простоквашино',
         productCountry: 'Россия',
         productWeight: '987г',
-        productCategory: 'Молоко, сыр, яйцо',
+        productCategoryId: 1,
         productArticl: '371432',
     },
     {
@@ -60,7 +60,7 @@ const ArrProducts = [
         productBrand: 'МЯСНАЯ ИСТОРИЯ',
         productCountry: 'Россия',
         productWeight: '450г',
-        productCategory: 'Мясо, птица, рыба, колбаса',
+        productCategoryId: 11,
         productArticl: '371433',
     },
     {
@@ -73,7 +73,7 @@ const ArrProducts = [
         productBrand: 'Папа может',
         productCountry: 'Россия',
         productWeight: '350г',
-        productCategory: 'Мясо, птица, рыба, колбаса',
+        productCategoryId: 11,
         productArticl: '371434',
     },
     {
@@ -86,7 +86,7 @@ const ArrProducts = [
         productBrand: 'Ближние горки',
         productCountry: 'Россия',
         productWeight: '350г',
-        productCategory: 'Мясо, птица, рыба, колбаса',
+        productCategoryId: 11,
         productArticl: '371435',
     },
     {
@@ -99,7 +99,7 @@ const ArrProducts = [
         productBrand: 'БРЯНСКСЕЛЬМАШ',
         productCountry: 'Россия',
         productWeight: '400г',
-        productCategory: 'Мясо, птица, рыба, колбаса',
+        productCategoryId: 11,
         productArticl: '371436',
     },
     {
@@ -112,7 +112,7 @@ const ArrProducts = [
         productBrand: 'Dorbly',
         productCountry: 'Россия',
         productWeight: '300г',
-        productCategory: 'Молоко, сыр, яйцо',
+        productCategoryId: 1,
         productArticl: '371437',
     },
     {
@@ -125,7 +125,7 @@ const ArrProducts = [
         productBrand: 'РОГАЧЕВ',
         productCountry: 'Россия',
         productWeight: '400г',
-        productCategory: 'Молоко, сыр, яйцо',
+        productCategoryId: 1,
         productArticl: '371438',
     },
     {
@@ -138,7 +138,7 @@ const ArrProducts = [
         productBrand: 'Простоквашино',
         productCountry: 'Россия',
         productWeight: '200г',
-        productCategory: 'Молоко, сыр, яйцо',
+        productCategoryId: 1,
         productArticl: '371439',
     },
     {
@@ -151,7 +151,7 @@ const ArrProducts = [
         productBrand: 'Fruttis',
         productCountry: 'Россия',
         productWeight: '70г',
-        productCategory: 'Молоко, сыр, яйцо',
+        productCategoryId: 1,
         productArticl: '371440',
     },
     {
@@ -164,7 +164,7 @@ const ArrProducts = [
         productBrand: 'Fruttis',
         productCountry: 'Россия',
         productWeight: '70г',
-        productCategory: 'Молоко, сыр, яйцо',
+        productCategoryId: 1,
         productArticl: '371441',
     },
     {
@@ -177,7 +177,7 @@ const ArrProducts = [
         productBrand: 'Global Village',
         productCountry: 'Россия',
         productWeight: '270г',
-        productCategory: 'Фрукты и овощи',
+        productCategoryId: 3,
         productArticl: '371442',
     },  
     {
@@ -190,7 +190,7 @@ const ArrProducts = [
         productBrand: 'Global Village',
         productCountry: 'Россия',
         productWeight: '950г',
-        productCategory: 'Напитки',
+        productCategoryId: 5,
         productArticl: '371443',
     }, 
     {
@@ -203,7 +203,7 @@ const ArrProducts = [
         productBrand: 'Global Village',
         productCountry: 'Россия',
         productWeight: '720г',
-        productCategory: 'Фрукты и овощи',
+        productCategoryId: 3,
         productArticl: '371444',
     },
     {
@@ -216,7 +216,7 @@ const ArrProducts = [
         productBrand: 'Global Village',
         productCountry: 'Россия',
         productWeight: '680г',
-        productCategory: 'Фрукты и овощи',
+        productCategoryId: 3,
         productArticl: '371445',
     },
     {
@@ -229,7 +229,7 @@ const ArrProducts = [
         productBrand: 'Global Village',
         productCountry: 'Россия',
         productWeight: '400г',
-        productCategory: 'Фрукты и овощи',
+        productCategoryId: 3,
         productArticl: '371446',
     }, 
     {
@@ -242,7 +242,7 @@ const ArrProducts = [
         productBrand: 'Global Village',
         productCountry: 'Россия',
         productWeight: '700г',
-        productCategory: 'Фрукты и овощи',
+        productCategoryId: 3,
         productArticl: '371447',
     }, 
     {
@@ -255,7 +255,7 @@ const ArrProducts = [
         productBrand: 'Шарлиз',
         productCountry: 'Россия',
         productWeight: '137г',
-        productCategory: 'Кондитерские изделия',
+        productCategoryId: 6,
         productArticl: '371448',
     },
     {
@@ -268,7 +268,7 @@ const ArrProducts = [
         productBrand: 'Шарлиз',
         productCountry: 'Россия',
         productWeight: '250г',
-        productCategory: 'Кондитерские изделия',
+        productCategoryId: 6,
         productArticl: '371449',
     },
     {
@@ -281,7 +281,7 @@ const ArrProducts = [
         productBrand: 'Societe Minerale',
         productCountry: 'Россия',
         productWeight: '1600г',
-        productCategory: 'Напитки',
+        productCategoryId: 5,
         productArticl: '371450',
     },
     {
@@ -294,7 +294,7 @@ const ArrProducts = [
         productBrand: 'Societe Minerale',
         productCountry: 'Россия',
         productWeight: '1600г',
-        productCategory: 'Напитки',
+        productCategoryId: 5,
         productArticl: '371451',
     },
     {
@@ -307,7 +307,7 @@ const ArrProducts = [
         productBrand: 'Fish House',
         productCountry: 'Россия',
         productWeight: '200г',
-        productCategory: 'Мясо, птица, рыба, колбаса',
+        productCategoryId: 11,
         productArticl: '371452',
     },
     {
@@ -320,7 +320,7 @@ const ArrProducts = [
         productBrand: 'Fish House',
         productCountry: 'Россия',
         productWeight: '220г',
-        productCategory: 'Мясо, птица, рыба, колбаса',
+        productCategoryId: 11,
         productArticl: '371453',
     },
     {
@@ -333,7 +333,7 @@ const ArrProducts = [
         productBrand: 'Мясная Ферма',
         productCountry: 'Россия',
         productWeight: '100г',
-        productCategory: 'Мясо, птица, рыба, колбаса',
+        productCategoryId: 11,
         productArticl: '371454',
     },
 ];

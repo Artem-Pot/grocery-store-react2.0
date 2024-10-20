@@ -4,6 +4,7 @@ import Navigation from '../Navigation/Navigation';
 import { NavLink } from "react-router-dom";
 import Title from '../Form/Title/Title';
 import Product from '../Products/Product';
+import Product2 from '../Products/Product2';
 import ArrCategory from '../../helpers/ArrCategory/ArrCategory';
 //ползунок
 import MultiRangeSlider from '../../utils/MultiRangeSlider/MultiRangeSlider';
@@ -12,8 +13,10 @@ import React, { useState } from "react";
 import ReactSwitch from "react-switch";
 
 //состояния переключателя
-const CatalogProduct = (props) => {   
+const CatalogProduct = (props) => {  
+
     const [checked, setChecked] = useState(false);
+    
     const handleChange = (nextChecked) => {
       setChecked(nextChecked);
     };
@@ -30,6 +33,7 @@ const CatalogProduct = (props) => {
     
     const searcId = searchCategoryId(location); //найденный id
 
+    
     return (
         <>
         <section className="catalog-product">
@@ -50,7 +54,7 @@ const CatalogProduct = (props) => {
                                 <button className="filter__btn-clear">Очистить</button>
                             </div>
 
-                            <MultiRangeSlider min={0} max={100000} onChange={({ min, max }) => console.log()} />
+                            <MultiRangeSlider min={0} max={100000} onChange={({ min, max }) => console.log(`Min: ${min}, Max: ${max}`)} />
         
                         </div>
 
@@ -62,17 +66,17 @@ const CatalogProduct = (props) => {
                           
                         <div  className="filter__switch">
                             <ReactSwitch
-                            checked={checked}
-                            onChange={handleChange}
-                            onColor="#70C05B"
-                            handleDiameter={20}
-                            uncheckedIcon={false}
-                            checkedIcon={false}
-                            fontSize= {20}
-                            height={24}
-                            width={44}
-                            className="filter__checkbox"
-                            id="material-switch"
+                                checked={checked}
+                                onChange={handleChange}
+                                onColor="#70C05B"
+                                handleDiameter={20}
+                                uncheckedIcon={false}
+                                checkedIcon={false}
+                                fontSize= {20}
+                                height={24}
+                                width={44}
+                                className="filter__checkbox"
+                                id="material-switch"
                             />
                             <span>В наличии</span>
                         </div>
@@ -88,7 +92,8 @@ const CatalogProduct = (props) => {
                     </div>
 
                     <div className="filter__box-product">
-                        <Product startProducts={0} quantityProducts={23} />
+                        <Product2 idProduct={2} hiddenProperties={'false'} />
+                        <Product2 idProduct={searcId} hiddenProperties={'false'} />
                     </div>
 
                 </div>
@@ -99,4 +104,9 @@ const CatalogProduct = (props) => {
 };
  
 export default CatalogProduct;
- 
+
+
+                    // <div className="filter__box-product">
+                    //     <Product2 idProduct={2}  hiddenProperties={'false'} />
+                    //     <Product2 idProduct={searcId}  hiddenProperties={'false'} />
+                    // </div>
