@@ -37,7 +37,8 @@ function Header(props) {
         </NavLink>
 
           
-          <div className="header__menu" ref={container} onMouseOver={handleDropdownClick}>
+          <div className="header__menu" >
+          {/*<div className="header__menu" ref={container} onMouseOver={handleDropdownClick}>*/}
             <NavLink to="catalog">
               <div className="button__menu" >
                   <span>Каталог</span>

@@ -6,33 +6,33 @@ import Title from '../Form/Title/Title';
 import Product from '../Products/Product';
 import Product2 from '../Products/Product2';
 import ArrCategory from '../../helpers/ArrCategory/ArrCategory';
+import ArrProducts from '../../helpers/ArrProducts/ArrProducts';
 //ползунок
 import MultiRangeSlider from '../../utils/MultiRangeSlider/MultiRangeSlider';
 //переключатель чек бокс
 import React, { useState } from "react";
 import ReactSwitch from "react-switch";
 
-//состояния переключателя
-const CatalogProduct = (props) => {  
 
+const CatalogProduct = (props) => {  
+    //хуки для чекбокса
     const [checked, setChecked] = useState(false);
-    
     const handleChange = (nextChecked) => {
       setChecked(nextChecked);
     };
 
     const location = (useLocation().pathname.slice(9)); //получение обозначения категории через URL
-    
+
+
     const searchCategoryId = function (location) {
         const foundItem = ArrCategory.find((item) => item.urlCategory === location);
         if (foundItem) {
             return foundItem.id; // Возвращаем id найденного элемента
         }
-        return null; // Возвращаем null если элемент не найден
+        return null;
     };
     
-    const searcId = searchCategoryId(location); //найденный id
-
+    const searcId = searchCategoryId(location); //найденный id категории
     
     return (
         <>
@@ -92,14 +92,20 @@ const CatalogProduct = (props) => {
                     </div>
 
                     <div className="filter__box-product">
-                        <Product2 idProduct={2} hiddenProperties={'false'} />
-                        <Product2 idProduct={searcId} hiddenProperties={'false'} />
+                        {ArrProducts.map((product) => (
+                            product.productCategoryId === searcId
+                            ? <Product2 idProduct={product.id} hiddenProperties={'false'} key={product.id} 
+                            /> 
+                            
+                            : null 
+                        ))}
                     </div>
 
                 </div>
             </div>
         </section>
         </>
+        
     );
 };
  
@@ -109,4 +115,14 @@ export default CatalogProduct;
                     // <div className="filter__box-product">
                     //     <Product2 idProduct={2}  hiddenProperties={'false'} />
                     //     <Product2 idProduct={searcId}  hiddenProperties={'false'} />
-                    // </div>
+                    // </div> <span >{product.id}</span>
+
+
+                    // <div className="filter__box-product">
+                    // {ArrProducts.map((product) => (
+                    //     product.productCategoryId === 4
+                    //     ? <Product2 idProduct={product.id} hiddenProperties={'false'} key={product.id} 
+                    //     /> 
+                        
+                    //     : null 
+                    // ))}

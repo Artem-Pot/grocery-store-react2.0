@@ -323,19 +323,19 @@ const ArrProducts = [
         productCategoryId: 11,
         productArticl: '371453',
     },
-    {
-        id: 24,
-        imgProduct: imgProduct24,
-        productSales:'-15%',
-        productPriceCart:'89',
-        productNoCart:'96',
-        productName: 'Карбонад Мясная Ферма из свинины копчено-вареный 100г',
-        productBrand: 'Мясная Ферма',
-        productCountry: 'Россия',
-        productWeight: '100г',
-        productCategoryId: 11,
-        productArticl: '371454',
-    },
+    // {
+    //     id: 24,
+    //     imgProduct: imgProduct24,
+    //     productSales:'-15%',
+    //     productPriceCart:'89',
+    //     productNoCart:'96',
+    //     productName: 'Карбонад Мясная Ферма из свинины копчено-вареный 100г',
+    //     productBrand: 'Мясная Ферма',
+    //     productCountry: 'Россия',
+    //     productWeight: '100г',
+    //     productCategoryId: 11,
+    //     productArticl: '371454',
+    // },
 ];
 
 export default ArrProducts;
