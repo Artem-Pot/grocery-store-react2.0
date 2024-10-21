@@ -65,8 +65,8 @@ const MultiRangeSlider = ({ min, max, onChange }) => {
 
       <div className="slider-range">
       <div className="filter__box-input">
-        <input type="number" className="slider-range__left-value" defaultValue={minVal}/> -
-        <input type="number" className="slider-range__right-value" defaultValue={maxVal}/>
+        <input type="number" className="slider-range__left-value" value={minVal} onChange={setMinVal}/> -
+        <input type="number" className="slider-range__right-value" value={maxVal} onChange={setMaxVal}/>
       </div>
         <div className="slider-range__track" />
         <div ref={range} className="slider-range__range" />
