@@ -9,7 +9,7 @@ import ArrProducts from '../../helpers/ArrProducts/ArrProducts';
 //ползунок
 import MultiRangeSlider from '../../utils/MultiRangeSlider/MultiRangeSlider';
 //переключатель чек бокс
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ReactSwitch from "react-switch";
 
 const CatalogProduct = (props) => { 
@@ -32,14 +32,34 @@ const CatalogProduct = (props) => {
     
     const searcId = searchCategoryId(location); //найденный id категории
 
-    //хуки кнопки показать ещё
-    const [visibleCount, setVisibleCount] = useState(6); // Количество отображаемых продуктов
+    // //хуки кнопки показать ещё
+    // const [visibleCount, setVisibleCount] = useState(6); // Количество отображаемых продуктов
+    // const handleShowMore = () => {
+    //     setVisibleCount(prevCount => prevCount + 3); // Увеличиваем на 3 по клику на "Показать ещё"
+    // };
+    // const availableProducts = ArrProducts.filter(product => product.productCategoryId === searcId); // Фильтруем доступные продукты
+    // const visibleProducts = availableProducts.slice(0, visibleCount); // Ограничиваем количество видимых доступных продуктов
+
+
+    const itemsPerPage = 3; // Количество продуктов на странице
+    const totalPages = Math.ceil(ArrProducts.length / itemsPerPage); // Общее количество страниц
+    const [currentPage, setCurrentPage] = useState(1); // Текущая страница
+    const [visibleCount, setVisibleCount] = useState(itemsPerPage); // Количество отображаемых продуктов
+
     const handleShowMore = () => {
-        setVisibleCount(prevCount => prevCount + 3); // Увеличиваем на 3 по клику на "Показать ещё"
+        // Увеличиваем количество отображаемых продуктов
+        setVisibleCount(prevCount => Math.min(prevCount + itemsPerPage, ArrProducts.length));
     };
+
+    const handlePageChange = (page) => {
+        setCurrentPage(page);
+        setVisibleCount(page * itemsPerPage); // Сбрасываем видимые товары до текущей страницы
+    };
+
     const availableProducts = ArrProducts.filter(product => product.productCategoryId === searcId); // Фильтруем доступные продукты
-    const visibleProducts = availableProducts.slice(0, visibleCount); // Ограничиваем количество видимых доступных продуктов
+    const displayedProducts = availableProducts.slice(0, visibleCount); // Ограничиваем количество видимых доступных продуктов
     
+
     return (
         <>
         <section className="catalog-product">
@@ -98,15 +118,36 @@ const CatalogProduct = (props) => {
                     </div>
 
                     <div className="filter__box-product">
-                                                                                  
-                            {visibleProducts.map((product) => (
-                                <Product idProduct={product.id} hiddenProperties={'false'} key={product.id} /> 
-                            ))}
-                            
-                            {visibleCount < availableProducts.length && ( // Показываем кнопку, если есть еще доступные продукты
-                                <button onClick={handleShowMore}>Показать ещё</button>
-                            )}
+
+                        {displayedProducts.map(product => (
+                            <Product idProduct={product.id} hiddenProperties={'false'} key={product.id} />
+                        ))}
+                    
+                        {visibleCount < ArrProducts.length && ( // Показываем кнопку, если есть еще продукты
+                            <button onClick={handleShowMore}>Показать ещё</button>
+                        )}
+
+                        <div>
+                            <h3>Страницы:</h3>
+                            <ul style={{ display: 'flex', listStyleType: 'none', padding: 0 }}>
+                                {Array.from({ length: totalPages }, (_, index) => (
+                                    <li key={index + 1} style={{ marginRight: '10px' }}>
+                                        <button
+                                            onClick={() => handlePageChange(index + 1)} // Обрабатываем переход на страницу
+                                            disabled={currentPage === index + 1}
+                                        >
+                                            {index + 1}
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                
+                
+
+
                     </div>
+
 
                 </div>
             </div>
