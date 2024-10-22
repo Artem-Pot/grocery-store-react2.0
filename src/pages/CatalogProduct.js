@@ -3,7 +3,7 @@ import CatalogProductCategory from "../components/PagesCatalogProduct/CatalogPro
 function CatalogProduct(props){
     return (
         <>
-            <CatalogProductCategory to={'123'} nav={'/'} catalog={'Каталог'} arrowRight={'true'}/>
+            <CatalogProductCategory />
         </>
     );
 };

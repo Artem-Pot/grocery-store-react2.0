@@ -12,7 +12,7 @@ import MultiRangeSlider from '../../utils/MultiRangeSlider/MultiRangeSlider';
 import React, { useState, useRef } from "react";
 import ReactSwitch from "react-switch";
 
-const CatalogProduct = (props) => { 
+const CatalogProduct = () => { 
 
     //хуки для чекбокса
     const [checked, setChecked] = useState(false);
@@ -64,6 +64,7 @@ const CatalogProduct = (props) => {
             <div className="container">
                 <Navigation url={'Каталог'}/> 
                 <Title text={ArrCategory[searcId - 1].textCategory} hiddenTextall={'true'}/>
+
                 <div className="catalog-product__wrapper">
                     <div className="catalog-product__header">
                         <a hreа="/" className="catalog-product__header-link"><span>Товары нашего производства</span></a>
