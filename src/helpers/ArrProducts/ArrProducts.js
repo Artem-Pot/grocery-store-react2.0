@@ -40,6 +40,17 @@ import imgProduct39 from './img/product-39.png';
 import imgProduct40 from './img/product-40.png';
 import imgProduct41 from './img/product-41.png';
 import imgProduct42 from './img/product-42.png';
+import imgProduct43 from './img/product-43.png';
+import imgProduct44 from './img/product-44.png';
+import imgProduct45 from './img/product-45.png';
+import imgProduct46 from './img/product-46.png';
+import imgProduct47 from './img/product-47.png';
+import imgProduct48 from './img/product-48.png';
+import imgProduct49 from './img/product-49.png';
+import imgProduct50 from './img/product-50.png';
+import imgProduct51 from './img/product-51.png';
+import imgProduct52 from './img/product-52.png';
+import imgProduct53 from './img/product-53.png';
 
 const ArrProducts = [
     {
@@ -588,6 +599,150 @@ const ArrProducts = [
         productCategoryId: 5,
         productArticl: '371470',
     },
+    {
+        id: 43,
+        imgProduct: imgProduct43,
+        productSales:'-10%',
+        productPriceCart:'115',
+        productNoCart:'128',
+        productName: "Пирожное бисквитное Медвежонок Барни с бананово-йогуртовой начинкой 150г",
+        productBrand: "Барни",
+        productCountry: 'Россия',
+        productWeight: '150',
+        productCategoryId: 6,
+        productArticl: '371471',
+    },
+    {
+        id: 44,
+        imgProduct: imgProduct44,
+        productSales:'-10%',
+        productPriceCart:'230',
+        productNoCart:'246',
+        productName: "Эклеры Фили-Бейкер заварные 250г",
+        productBrand: "Фили-Бейкер",
+        productCountry: 'Россия',
+        productWeight: '250',
+        productCategoryId: 6,
+        productArticl: '371472',
+    },
+    {
+        id: 45,
+        imgProduct: imgProduct45,
+        productSales:'-10%',
+        productPriceCart:'220',
+        productNoCart:'236',
+        productName: "Пирожные Baker House мини-тарты карамельно-арахисовые 240г",
+        productBrand: "Baker House",
+        productCountry: 'Россия',
+        productWeight: '240',
+        productCategoryId: 6,
+        productArticl: '371473',
+    },
+    {
+        id: 46,
+        imgProduct: imgProduct46,
+        productSales:'-10%',
+        productPriceCart:'240',
+        productNoCart:'257',
+        productName: "Пирожные Фили-Бейкер Кольца заварные 300г",
+        productBrand: "Фили-Бейкер",
+        productCountry: 'Россия',
+        productWeight: '300',
+        productCategoryId: 6,
+        productArticl: '371474',
+    },
+    {
+        id: 47,
+        imgProduct: imgProduct47,
+        productSales:'-10%',
+        productPriceCart:'160',
+        productNoCart:'178',
+        productName: "Пирожное АМА бисквитное с кремом 160г",
+        productBrand: "Ама",
+        productCountry: 'Россия',
+        productWeight: '160',
+        productCategoryId: 6,
+        productArticl: '371475',
+    },
+    {
+        id: 48,
+        imgProduct: imgProduct48,
+        productSales:'-15%',
+        productPriceCart:'270',
+        productNoCart:'289',
+        productName: "Кофе Жокей По-восточному натуральный жареный молотый 250г",
+        productBrand: "Жокей",
+        productCountry: 'Россия',
+        productWeight: '250',
+        productCategoryId: 7,
+        productArticl: '371476',
+    },
+    {
+        id: 49,
+        imgProduct: imgProduct49,
+        productSales:'-10%',
+        productPriceCart:'344',
+        productNoCart:'369',
+        productName: "Кофе молотый Monarch Original натуральный жареный 230г",
+        productBrand: "Monarch",
+        productCountry: 'Россия',
+        productWeight: '230',
+        productCategoryId: 7,
+        productArticl: '371477',
+    },
+    {
+        id: 50,
+        imgProduct: imgProduct50,
+        productSales:'-10%',
+        productPriceCart:'1000',
+        productNoCart:'1102',
+        productName: "Кофе в зернах Venetto Crema натуральный жареный 1кг",
+        productBrand: "Venetto",
+        productCountry: 'Италия',
+        productWeight: '1000',
+        productCategoryId: 7,
+        productArticl: '371478',
+    },
+    {
+        id: 51,
+        imgProduct: imgProduct51,
+        productSales:'-10%',
+        productPriceCart:'70',
+        productNoCart:'78',
+        productName: "Чай черный Азерчай Букет 25х2г",
+        productBrand: "Азерчай",
+        productCountry: 'Россия',
+        productWeight: '50',
+        productCategoryId: 7,
+        productArticl: '371479',
+    },
+    {
+        id: 52,
+        imgProduct: imgProduct52,
+        productSales:'-10%',
+        productPriceCart:'95',
+        productNoCart:'104',
+        productName: "Чай черный Greenfield Earl Grey Fantasy с бергамотом 25х2г",
+        productBrand: "Greenfield",
+        productCountry: 'Россия',
+        productWeight: '50',
+        productCategoryId: 7,
+        productArticl: '371480',
+    },
+    {
+        id: 53,
+        imgProduct: imgProduct53,
+        productSales:'-10%',
+        productPriceCart:'80',
+        productNoCart:'89',
+        productName: "Чай зеленый Assand Milk Oolong китайский молочный улун 25x2г",
+        productBrand: "Assand",
+        productCountry: 'Россия',
+        productWeight: '50',
+        productCategoryId: 7,
+        productArticl: '371481',
+    },
+
 ];
 
 export default ArrProducts;
