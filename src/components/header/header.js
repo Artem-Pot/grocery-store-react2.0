@@ -9,13 +9,13 @@ import { ReactComponent as ShoppingCart } from "./img/shopping-cart.svg";
 import Avatar from './img/profile.svg';
 import { ReactComponent as ArrowDown } from './img/arrow-down.svg';
 
-function Header(props) {
+function Header({ onSearch }) {
   const container = useRef();
 
   const [dropdownState, setDropdownState] = useState({ open: false }); // выпадающее меню каталога
 
-  const handleDropdownClick = () =>
-    setDropdownState({ open: !dropdownState.open });
+  // const handleDropdownClick = () =>
+  //   setDropdownState({ open: !dropdownState.open });
 
   //событие меню 
   const ClickOutsid = (e) => {
@@ -24,9 +24,18 @@ function Header(props) {
   }
 
   //закрытие меню при клике вне меню
-  useEffect(() => {document.addEventListener("mousedown", ClickOutsid);
-    return () => document.removeEventListener("mousedown", ClickOutsid);}
-  );
+  // useEffect(() => {document.addEventListener("mousedown", ClickOutsid);
+  //   return () => document.removeEventListener("mousedown", ClickOutsid);}
+  // );
+
+//поиск товаров
+const [searchTerm, setSearchTerm] = useState('');
+
+const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+    onSearch(event.target.value); // Вызов функции поиска из пропсов
+};
+
 
   return (
     <header className="header">
@@ -57,14 +66,20 @@ function Header(props) {
           </div>
 
           <div className="header__box-search">
-            <input className="header__search" type="text" placeholder="Найти товар"/>
+            <input className="header__search" 
+              type="text" 
+              placeholder="Найти товар"
+              value={searchTerm}
+              onChange={handleSearch} />
             <button className="button__search"></button>
           </div>
+
           <div className="header__box-icons">
             <NavLink to="/heart"><div className="header__wrapper-icons"><Heart /><span className="header__title">Избранное</span></div></NavLink>
             <NavLink to="/order"><div className="header__wrapper-icons"><Order /><span className="header__title">Заказы</span></div></NavLink>
             <NavLink to="/shopping-cart"><div className="header__wrapper-icons"><ShoppingCart /><span className="header__title">Корзина</span></div></NavLink>
           </div>
+
           <div className="header__box-profile">
             <img className="header__img-ava" src={Avatar} alt="Аватар"/>
             <span className="header__name-user">Артём</span>

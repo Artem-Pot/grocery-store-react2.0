@@ -32,14 +32,7 @@ const CatalogProduct = () => {
     
     const searcId = searchCategoryId(location); //найденный id категории
 
-    // //хуки кнопки показать ещё
-    // const [visibleCount, setVisibleCount] = useState(6); // Количество отображаемых продуктов
-    // const handleShowMore = () => {
-    //     setVisibleCount(prevCount => prevCount + 3); // Увеличиваем на 3 по клику на "Показать ещё"
-    // };
-    // const availableProducts = ArrProducts.filter(product => product.productCategoryId === searcId); // Фильтруем доступные продукты
-    // const visibleProducts = availableProducts.slice(0, visibleCount); // Ограничиваем количество видимых доступных продуктов
-
+    //кнопки показать ещё и список количества страниц с товарами
     const itemsPerPage = 6; // Количество продуктов на странице
     const [visibleCount, setVisibleCount] = useState(itemsPerPage); // Количество отображаемых продуктов
     const availableProducts = ArrProducts.filter(product => product.productCategoryId === searcId); // Фильтруем доступные продукты
@@ -119,15 +112,19 @@ const CatalogProduct = () => {
                     <div className="filter__box-product">
 
                         <div className="filter__list-product">
-                            {displayedProducts.map(product => (
+                        {displayedProducts.length > 0 ? (
+                            displayedProducts.map(product => (
                                 <Product idProduct={product.id} hiddenProperties={'false'} key={product.id} />
-                            ))}
+                            ))
+                        ) : (
+                            <span className="filter__no-product">Товаров соответствующих фильтрам не найдено</span>
+                        )}
                         </div>
 
                         <div className="filter__box-pages">
 
-                            {visibleCount < ArrProducts.length && ( // Показываем кнопку, если есть еще продукты
-                                <button className="filter__btn-show-more" onClick={handleShowMore}>Показать ещё</button>
+                            {visibleCount < ArrProducts.length && ( 
+                                <button className="filter__btn-show-more" onClick={handleShowMore}>Показать ещё</button> // Показываем кнопку, если есть еще продукты
                             )}
 
                             <ul className="filter__list-pages">
