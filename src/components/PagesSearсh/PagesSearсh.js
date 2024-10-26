@@ -1,5 +1,5 @@
 import Navigation from '../Navigation/Navigation';
-import { NavLink } from "react-router-dom";
+import { NavLink,useLocation } from "react-router-dom";
 import Title from '../Form/Title/Title';
 import Product from '../Products/Product';
 import ArrCategory from '../../helpers/ArrCategory/ArrCategory';
@@ -8,7 +8,20 @@ import React, { useState, useRef } from "react";
 
 import './style.css';
 
+const decodeCyrillic = (str) => { //декодирует кирилицу в url в читаемый вид
+    return decodeURIComponent(str);
+};
+
 function PagesSearсh(props, { products }){
+
+    // decodeCyrillic(location);
+    const location = decodeCyrillic((useLocation().search.slice(7))); //получение запроса поиска
+    console.log(location);
+    
+    const filteredProduct = ArrProducts.filter(product => //фильтрация и поиск словосочетания в названии товара
+        product.productName.toLowerCase().includes(location.toLowerCase())
+    );
+    
     return (
         <>
         <section className="searсh-product">
@@ -17,14 +30,9 @@ function PagesSearсh(props, { products }){
             <Title text={'Результаты поиска'} hiddenTextall={props.textAll} textAll={props.textAll}/>
 
             <div className="product-list__box">
-                <Product idProduct={1} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
-                <Product idProduct={2} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
-                <Product idProduct={3} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
-                <Product idProduct={4} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
-                <Product idProduct={8} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
-                <Product idProduct={12} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
-                <Product idProduct={19} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
-                <Product idProduct={25} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
+            {filteredProduct.map(product => (
+                    <Product key={product.id} idProduct={product.id} hiddenProperties={props.hiddenProperties} hiddenTextall={props.hiddenTextall}/>
+                ))}
             </div>
 
             </div>

@@ -31,6 +31,9 @@ function Header({ onSearch }) {
 //поиск товаров
 const [searchTerm, setSearchTerm] = useState('');
 
+
+
+
 const handleSearch = (event) => {
     setSearchTerm(event.target.value);
     onSearch(event.target.value); // Вызов функции поиска из пропсов
@@ -71,7 +74,9 @@ const handleSearch = (event) => {
               placeholder="Найти товар"
               value={searchTerm}
               onChange={handleSearch} />
-            <button className="button__search"></button>
+              <NavLink to={`/search?query=${searchTerm}`}>
+                <button className="button__search"></button>
+              </NavLink>
           </div>
 
           <div className="header__box-icons">
